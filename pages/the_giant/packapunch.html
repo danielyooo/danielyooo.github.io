@@ -28,7 +28,7 @@
     .then(data => {
       // Insertar el contenido de icons.html al final del body
       document.body.insertAdjacentHTML('beforeend', data);
-
+      
       // Agregar eventos de clic a los iconos
       document.getElementById('goToIndex').addEventListener('click', function() {
         window.location.href = '../../index.html';
