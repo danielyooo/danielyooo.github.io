@@ -6,7 +6,6 @@ body {
   background-position: top; /* Centra la imagen */
   color: white; /* Texto blanco */
   text-shadow: -1px -1px 0 black,  
-  
   1px -1px 0 black,
  -1px  1px 0 black,
   1px  1px 0 black; /* Borde negro */
@@ -14,7 +13,24 @@ body {
   padding: 0;
   background-attachment: fixed; /* Fondo de pantalla fijo */
 }
-
+@media (max-width: 768px) {
+  .tool-description .option-button {
+    right: 0; /* Ajustar la posición absoluta */
+    top: -8px;
+    .title {
+      margin-bottom: 50px; /* Reducir el margen inferior */
+    }
+  
+    .options {
+      flex-direction: column; /* Cambiar la dirección de flexión para dispositivos móviles */
+      align-items: center; /* Centrar horizontalmente los elementos */
+    }
+  
+    .option-button {
+      width: 100%; /* Ancho completo */
+    }
+  }
+  }
 .container {
   max-width: 800px;
   margin: 0 auto;
