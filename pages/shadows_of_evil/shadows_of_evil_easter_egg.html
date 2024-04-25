@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easter Egg de Shadows of Evil</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title"><strong>Easter Egg de Shadows of Evil</strong></h1>
+    <img src="Easter_egg_portada.jpg">
+ 
+    <section>
+      <p>
+        <strong>Requisitos:</strong><br><br> - Ser 4 jugadores (excepto mods).<br>- Activar el Pack-A-Punch.<br>- Que los 4 jugadores tengan la espada mejorada.<br>
+        <strong>Si cumplimos los requisitos</strong> Iremos al ritual del Spawn e interactuaremos con el libro del suelo.<br>
+        <img src="libro.png" width="600" height="350"><br>
+        <strong>Iremos a la zona de la entrada al Pack-A-Punch</strong> y nos llevaremos el estandarte.<br>
+        <img src="altar.png" width="600" height="350"><br>
+        <strong>Cargaremos el estandarte en 2 rayos blancos</strong> y lo llevaremos a un guardián..<br>
+        <img src="colocar_en_rayo.png" width="600" height="350"><br>
+        Tendremos que protegerlo de RAPS infinitos y de Shadowman hasta llevarlo a un altar de ritual.<br>
+        <div class="image-container">
+          <img src="proteger.png" width="600" height="350"><br>
+          <img src="disparar.png" width="600" height="350"><br>
+        </div>
+        Haremos esto <strong>con cada uno de los 4 rituales.</strong> Siempre que carguemos a uno tendremos que pasar de ronda para el siguiente. <br>
+        <img src="hasta_el_altar.png" width="600" height="350"><br>
+        <strong>Una vez completado</strong> los guardianes estarán en el ritual del Pack-A-Punch. Debemos activarlos para que rompan el escudo de Shadowman y luego dispararle a él.<br>
+        <img src="escudo_shadowman.png" width="600" height="350"><br>
+        La primera y segunda vez fallaremos y Shadowman invocará Margwas, pero la tercera vez que le disparemos, lo llevaremos al altar y lo atraparemos <strong>interactuando con él</strong>.<br>
+        <img src="atrapado.png" width="600" height="350"><br>
+        En ese momento el gusano gigante aparecerá y subirá a la zona central. En ese momento los personajes se infectarán cada cierto tiempo y las zonas de humo blanco nos salvarán, pero las marcas rosada nos harán daño.<br>
+        <img src="manchas.png" width="600" height="350"><br>
+        Tendremos que <strong>matar Margwas cerca de un pedestal</strong> para que este se cargue y entraremos en modo bestia (solo 3 jugadores). Estos jugadores subirán cada uno a una parada de tren y a la misma vez darán corriente a los 3 generadores, dejando las vías de color azul como el de la foto de debajo:<br>
+        <img src="generador.png" width="600" height="350"><br>
+        <strong>El 4º jugador llamará al tren desde cualquier lugar y todas las bestias irán corriendo a la zona central a electrocutar a los tres guardianes.</strong> Estos dispararán al gusano del cielo y saldrá la cinemática final.
+        <img src="final.png" width="600" height="350"><br>
+      </p>
+    </section>
+    <!-- Más secciones aquí -->
+
+  </div>
+  <script src="../../script.js"></script>
+   <!-- JavaScript para cargar los iconos -->
+   <script>
+    // Cargar el archivo icons.html
+    fetch('../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>
