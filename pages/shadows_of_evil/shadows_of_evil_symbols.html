@@ -4,110 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../styles.css">
+  <style>
+    /* Estilos generales */
+    
+    .container {
+      max-width: 100%; /* Cambiado para adaptarse al ancho del dispositivo */
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 114px); /* 3 columnas de 114px cada una */
+      grid-gap: 10px;
+      justify-content: center; /* Centrar el contenido horizontalmente */
+    }
+
+    .symbol {
+      width: 100%; /* Ancho completo */
+      height: 100%; /* Altura completa */
+      border: 2px solid transparent; /* Borde transparente */
+      cursor: pointer;
+      object-fit: cover; /* Recortar o expandir la imagen para que quepa en el contenedor */
+    }
+
+    .reload-button {
+      display: block;
+      margin: 20px auto;
+      width: 90px; /* Ancho de 60px */
+      height: 90px; /* Altura de 60px */
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <style>
-      /* Estilos generales */
-      
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-  
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 114px);
-        grid-gap: 10px;
-        justify-items: center;
-      }
-  
-      .symbol {
-        width: calc(100% - 20px); /* Ancho completo con margen de 10px a cada lado */
-      height: auto; /* Altura automática */
-        border: 2px solid transparent; /* Borde transparente */
-        cursor: pointer;
-      }
-  
-      .reload-button {
-        display: block;
-        margin: 20px auto;
-        width: 100px;
-        height: 100px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">Símbolos - Shadows of Evil</h1>
-      <div class="grid">
-        <img src="symbol_1.jpg" alt="Symbol 1" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_2.jpg" alt="Symbol 2" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_3.jpg" alt="Symbol 1" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_4.jpg" alt="Symbol 2" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_5.jpg" alt="Symbol 1" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_6.jpg" alt="Symbol 2" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_7.jpg" alt="Symbol 1" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_8.jpg" alt="Symbol 2" class="symbol" data-selected="false"class="responsive-image">
-        <img src="symbol_9.jpg" alt="Symbol 1" class="symbol" data-selected="false">
-        <!-- Agrega más imágenes según sea necesario -->
-      </div>
-      <img src="reload.png" alt="Reload" class="reload-button">
+    <h1 class="title">Símbolos - Shadows of Evil</h1>
+    <div class="grid">
+      <img src="symbol_1.jpg" alt="Symbol 1" class="symbol" data-selected="false">
+      <img src="symbol_2.jpg" alt="Symbol 2" class="symbol" data-selected="false">
+      <img src="symbol_3.jpg" alt="Symbol 3" class="symbol" data-selected="false">
+      <img src="symbol_4.jpg" alt="Symbol 4" class="symbol" data-selected="false">
+      <img src="symbol_5.jpg" alt="Symbol 5" class="symbol" data-selected="false">
+      <img src="symbol_6.jpg" alt="Symbol 6" class="symbol" data-selected="false">
+      <img src="symbol_7.jpg" alt="Symbol 7" class="symbol" data-selected="false">
+      <img src="symbol_8.jpg" alt="Symbol 8" class="symbol" data-selected="false">
+      <img src="symbol_9.jpg" alt="Symbol 9" class="symbol" data-selected="false">
+      <!-- Agrega más imágenes según sea necesario -->
     </div>
-  
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const symbols = document.querySelectorAll('.symbol');
-        let selectedCount = 0;
-  
-        symbols.forEach(function(symbol) {
-          symbol.addEventListener('click', function() {
-            if (symbol.getAttribute('data-selected') === 'false') {
-              if (selectedCount < 3) {
-                symbol.style.border = '8px solid rgb(235, 87, 2)';
-                symbol.setAttribute('data-selected', 'true');
-                selectedCount++;
-              }
-            } else {
-              symbol.style.border = '2px solid transparent';
-              symbol.setAttribute('data-selected', 'false');
-              selectedCount--;
+    <img src="reload.png" alt="Reload" class="reload-button">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const symbols = document.querySelectorAll('.symbol');
+      let selectedCount = 0;
+
+      symbols.forEach(function(symbol) {
+        symbol.addEventListener('click', function() {
+          if (symbol.getAttribute('data-selected') === 'false') {
+            if (selectedCount < 3) {
+              symbol.style.border = '3px solid rgb(235, 87, 2)';
+              symbol.setAttribute('data-selected', 'true');
+              selectedCount++;
             }
-          });
-        });
-  
-        const reloadButton = document.querySelector('.reload-button');
-        reloadButton.addEventListener('click', function() {
-          location.reload();
+          } else {
+            symbol.style.border = '2px solid transparent';
+            symbol.setAttribute('data-selected', 'false');
+            selectedCount--;
+          }
         });
       });
-    </script>
-  </body>
-  </div>
-  <script src="../../script.js"></script>
-  <!-- JavaScript para cargar los iconos -->
-  <script>
-    // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
-      .then(response => response.text())
-      .then(data => {
-        // Insertar el contenido de icons.html al final del body
-        document.body.insertAdjacentHTML('beforeend', data);
-        
-        // Agregar eventos de clic a los iconos
-        document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
-        });
 
-        document.getElementById('goBack').addEventListener('click', function() {
-          window.history.back();
-        });
-      })
-      .catch(error => console.error('Error loading icons:', error));
+      const reloadButton = document.querySelector('.reload-button');
+      reloadButton.addEventListener('click', function() {
+        location.reload();
+      });
+    });
   </script>
-  <!-- JavaScript para cargar los iconos -->
-  
 </body>
 </html>
