@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easter Egg (The Giant)</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Easter Egg (The Giant)</strong></h1> 
+    <img src="arma.png" width="720" height="480"><br><br><br>
+    <section>
+    <p>
+      <strong>Requisitos:</strong> Tener el Pack-A-Punch y un arma mejorada.<br>
+      <strong>Buscar los 4 osos y dispararles con armas mejoradas</strong> <br>Cuando tengamos el arma mejorada nos dirigiremos a la  derecha del Pack-A-Punch, y en la zona de fuera dispararemos al oso que está al lado de la columna.<br>
+      <img src="oso1.png" width="600" height="350"><br>
+      Para el siguiente nos dirigiremos al teleporter de la derecha del Pack-A-Punch, y en la zona de debajo dispararemos al oso que está dentro de la compuerta abierta.<br>
+      <img src="oso2.png" width="600" height="350"><br>    
+      Para el siguiente nos dirigiremos al teleporter enfrente del Pack-A-Punch, y en la zona de fuera dispararemos al oso que está en el balcón del edificio.<br>  
+      <img src="oso3.png" width="600" height="350"><br>
+      Para el último nos dirigiremos al teleporter a la izquierda del Pack-A-Punch, y en el agujero de la izquierda dispararemos <strong>saltando</strong> al oso que está en el interior.<br>
+      <img src="oso4.png" width="600" height="350"><br>
+      Cada vez que disparemos a uno se oirá un sonido de confirmación. Por ultimo, vamos debajo de la zona del último oso, podremos recoger el arma especial y el Easter Egg estará completado.
+      <img src="recoger.png" width="600" height="350"><br>
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

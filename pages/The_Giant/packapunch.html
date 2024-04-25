@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack-A-Panch</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Pack-A-Panch (The Giant)</strong></h1>
+    <img src="mapa.png" width="1280" height="720"><br><br><br>
+    <section>
+    <p>
+      <strong>Para activarlo tendremos que activar los 3 teletransportes.</strong> Cada vez que activemos uno tendremos que ir al spawn y sincronizarlo con el del Pack-A-Punch. Esto se debe de hacer 3 veces y tendremos un periodo de tiempo limitado para realizarlo.<br>
+      <img src="packapunch.png" width="720" height="480"><br>
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
