@@ -7,52 +7,53 @@
   <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-    <div class="title-with-image">
+<div class="container">
+  <div class="title-with-image">
     <h1 class="title"><strong>Espada</strong></h1>
-    <img src="espada.png" width="1280" height="720"><br><br><br>
+    <img src="espada.png" alt="Espada" class="responsive-image"><br><br><br>
     <section>
       <p>
         Tendremos que ver unos símbolos en el tren y memorizarlos. Después en modo bestia daremos electricidad a los símbolos que vimos y obtendremos el huevo. Tendremos que cargar el huevo en las cuatro estatuas del mapa, matando zombies. Una vez completado, regresaremos al lugar donde lo obtuvimos y nos darán la espada.
       </p>
-      <p class="tool-description">
-        Aquí una sencilla herramienta para apuntar los símbolos:
+      <div class="tool-description">
+        <p>Aquí una sencilla herramienta para apuntar los símbolos:</p>
         <button class="option-button" id="shadows_of_evil_symbols">Símbolos</button>
-      </p>
+      </div>
 
-      <strong>Símbolos:</strong><br> -   Tren desde <strong>Footlight</strong> a <strong>Canals</strong> obtendremos el primer símbolo a la <strong>izquierda y </strong> el segundo a la <strong>derecha</strong>.<br>-   Tren desde <strong>Canals</strong> a <strong>Waterfront</strong> y tendremos el tercer símbolo a nuestra <strong>izquierda</strong>.<br>
-      <img src="simbolo.png" width="600" height="350"><br>
+      <p><strong>Símbolos:</strong><br> -   Tren desde <strong>Footlight</strong> a <strong>Canals</strong> obtendremos el primer símbolo a la <strong>izquierda y </strong> el segundo a la <strong>derecha</strong>.
+</p>
+      <img src="simbolo.png" alt="Símbolos" class="responsive-image"><br>
       <strong>Dar electricidad a los símbolos que vimos:</strong><br>
-      <img src="pared.jpg" width="600" height="350"><br>
-      <strong>Estatuas:</strong> En entrada al Pack-A-Punch, en Waterfront (Debajo del Perk o zona de pieza de escudo ), en Footlight (subiendo donde la pieza del escudo) y en Canals (debajo del club de baile).<br>
-      <img src="estatua.png" width="600" height="350"><br>
+      <img src="pared.jpg" alt="Electricidad" class="responsive-image"><br>
+      <strong>Estatuas:</strong> En entrada al Pack-A-Punch, en Waterfront (Debajo del Perk o zona de pieza de escudo ), en Footlight (subiendo donde la pieza del escudo) y en Canals (debajo del club de baile).
+</p>
+      <img src="estatua.png" alt="Estatuas" class="responsive-image"><br>
       Cuando se complete el huevo (veremos el progreso en el marcador, donde se irá llenando el huevo hasta ser azul) podremos recoger la espada.<br>
-      <img src="huevo.png" width="600" height="350"><br>
-    </p>
-  </section>
-   <!-- Más secciones aquí -->
-
+      <img src="huevo.png" alt="Huevo" class="responsive-image"><br>
+    </section>
+  </div>
 </div>
 <script src="../../script.js"></script>
- <!-- JavaScript para cargar los iconos -->
- <script>
+<!-- JavaScript para cargar los iconos -->
+<script>
   // Cargar el archivo icons.html
   fetch('../../icons/icons.html')
     .then(response => response.text())
     .then(data => {
       // Insertar el contenido de icons.html al final del body
       document.body.insertAdjacentHTML('beforeend', data);
-      
-      // Agregar eventos de clic a los iconos
-      document.getElementById('goToIndex').addEventListener('click', function() {
-        window.location.href = '../../index.html';
-      });
+  // Agregar eventos de clic a los iconos
+  document.getElementById('goToIndex').addEventListener('click', function() {
+    window.location.href = '../../index.html';
+  });
 
-      document.getElementById('goBack').addEventListener('click', function() {
-        window.history.back();
-      });
-    })
-    .catch(error => console.error('Error loading icons:', error));
+  document.getElementById('goBack').addEventListener('click', function() {
+    window.history.back();
+  });
+})
+.catch(error => console.error('Error loading icons:', error));
 </script>
 <!-- JavaScript para cargar los iconos -->
 </body>
 </html>
+```

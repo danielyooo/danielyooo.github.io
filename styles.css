@@ -118,7 +118,14 @@ body {
 .option-button:hover {
   background-color: #c7430f; /* Gris medio */
 }
-
+/* Estilos de las imágenes */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 /* Estilos de las funciones */
 
 .function {
