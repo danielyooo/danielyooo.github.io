@@ -29,11 +29,38 @@ body {
   left: 0;
 }
 
+
 .right {
   top: 0;
   right: 0;
 }
+/* Estilos para las imágenes de las estatuas */
 
+.statue-image {
+  width: 100px; /* Ajusta el ancho según sea necesario */
+  height: 100px; /* Ajusta la altura según sea necesario */
+  margin-bottom: 10px; /* Espacio entre las imágenes */
+  cursor: pointer; /* Cambia el cursor al pasar sobre las imágenes */
+  border: 2px solid transparent; /* Borde inicial transparente */
+  transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+  display: block; /* Asegura que las imágenes sean bloques para centrarlas */
+  margin: 0 auto; /* Centra las imágenes horizontalmente */
+}
+
+/* Estilos para las imágenes de las estatuas cuando se interactúa */
+.statue-image:hover {
+  border-color: #c7430f; /* Cambia el color del borde a naranja cuando se pasa el mouse */
+}
+
+/* Estilos para la columna de imágenes seleccionadas */
+.selected-images-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra verticalmente las imágenes */
+  max-height: 330px; /* Altura máxima para la columna de imágenes seleccionadas */
+  overflow-y: auto; /* Agrega desplazamiento vertical si hay más de 3 imágenes */
+  margin-left: 20px; /* Espacio entre las dos columnas de imágenes */
+}
 .image-container {
   display: flex;
 }
