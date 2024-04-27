@@ -12,47 +12,11 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
-/* Estilos para las imágenes duplicadas */
-.duplicated-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px; /* Espacio entre los contenedores duplicados */
-}
-.symbol-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
 
-.symbol {
-  width: 80px; /* Ancho de los símbolos */
-  height: 80px; /* Altura de los símbolos */
-  margin-right: 5px; /* Espacio entre los símbolos */
-  margin-bottom: 5px; /* Espacio entre filas de símbolos */
-}
-
-/* Estilos para los símbolos duplicados */
-.duplicated-symbol {
-  width: 80px; /* Ancho de los símbolos duplicados */
-  height: 80px; /* Altura de los símbolos duplicados */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre los símbolos */
-  border: 2px solid transparent; /* Borde transparente */
-  transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
-}
-
-.duplicated-symbol:hover {
-  border-color: #c7430f; /* Cambia el color del borde a naranja cuando se pasa el mouse sobre los símbolos */
-}
-
-.selected-symbol {
-  border-color: #c7430f; /* Cambia el color del borde a naranja cuando se selecciona el símbolo */
-}
 /* Estilos para los iconos */
 .corner-icon {
   width: 30px;
@@ -76,7 +40,6 @@ body {
   width: 100px; /* Ajusta el ancho según sea necesario */
   height: 100px; /* Ajusta la altura según sea necesario */
   margin-bottom: 10px; /* Espacio entre las imágenes */
-  margin: 5px;
   cursor: pointer; /* Cambia el cursor al pasar sobre las imágenes */
   border: 2px solid transparent; /* Borde inicial transparente */
   transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
