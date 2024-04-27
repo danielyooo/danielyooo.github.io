@@ -1,1 +1,141 @@
-easter_egg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bombas de Gorod Krovi</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    /* Estilos para centrar la imagen horizontalmente */
+    .container {
+      text-align: center;
+      max-width: 80%; /* Ancho máximo del contenedor */
+      margin: 0 auto; /* Centrar el contenedor */
+      position: relative; /* Posición relativa para imágenes con números superiores */
+    }
+    .container img {
+      width: 40%; /* Ancho relativo de las imágenes */
+      max-width: 150px; /* Ancho máximo de cada imagen */
+      margin: 10px; /* Espacio entre las imágenes */
+      cursor: pointer; /* Cambiar cursor a puntero para indicar que se puede hacer clic */
+      position: relative; /* Posición relativa para alinear los números */
+    }
+    .number-overlay {
+        position: absolute; /* Posición absoluta para los números superiores */
+        top: 0; /* Ajustar la posición vertical al borde superior del contenedor */
+        left: 50%; /* Ajustar la posición horizontal al centro del contenedor */
+        transform: translateX(-50%); /* Alinear al centro horizontalmente */
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+        padding: 5px 10px; /* Espacio alrededor del número */
+        border-radius: 5px; /* Bordes redondeados */
+        font-weight: bold;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .number-overlay {
+          left: 50%; /* Ajustar la posición horizontal al centro del contenedor en dispositivos móviles */
+          transform: translateX(-50%); /* Alinear al centro horizontalmente en dispositivos móviles */
+        }
+      }
+      
+    .reload-button {
+      margin-top: 20px;
+      background-color: transparent; /* Fondo transparente */
+      border: none; /* Sin borde */
+    }
+    .reload-button img {
+      width: 50px; /* Ajuste el tamaño de la imagen del botón */
+    }
+
+    .instructions {
+      text-align: center; /* Centrar el texto */
+      margin-bottom: 20px; /* Espacio inferior */
+    }
+  </style>
+</head>
+<body>
+    <h1 class="title">Bombas (Gorod Krovi)</h1>
+    <div class="instructions">Toca en el orden que aparecen las bombas para tenerlo anotado. Si te equivocas recarga en el botón de abajo.</div>
+    <div class="container">
+      <img src="dragon_command.png" alt="Dragon Command" onclick="showNumber(this)">
+      <br>
+      <img src="tank.png" alt="Tank" onclick="showNumber(this)">
+      <img src="infarmary.png" alt="Infirmary" onclick="showNumber(this)">
+      <img src="armory.png" alt="Armory" onclick="showNumber(this)">
+      <img src="supply_depot.png" alt="Supply Depot" onclick="showNumber(this)">
+      <br>
+      <img src="department_store.png" alt="Department Store" onclick="showNumber(this)">
+      <br>
+      <button class="reload-button" onclick="reloadPage()"><img src="reload.png" alt="Reload"></button>
+    </div>
+  <script src="../../script.js"></script>
+  <!-- JavaScript para cargar los iconos -->
+  <script>
+    let currentNumber = 1; // Inicializamos el número actual en 1
+    let interactionEnabled = true; // Variable para habilitar o deshabilitar la interacción con las imágenes
+
+    function showNumber(image) {
+      if (!interactionEnabled) return; // Si la interacción está deshabilitada, salir de la función
+      
+      const key = image.src; // Utilizamos la URL de la imagen como clave para el objeto de números asignados
+      const assignedNumber = currentNumber; // Asignamos el número actual a la imagen clicada
+      currentNumber = currentNumber % 6 + 1; // Calculamos el siguiente número en secuencia circular de 1 a 6
+      
+      const existingOverlay = document.querySelector(`[data-src="${key}"]`); // Buscamos si ya hay un overlay para esta imagen
+      if (existingOverlay) {
+        existingOverlay.textContent = assignedNumber; // Actualizamos el número mostrado
+      } else {
+        const overlay = document.createElement('div'); // Creamos un nuevo overlay si no existe
+        overlay.classList.add('number-overlay');
+        overlay.textContent = assignedNumber;
+        overlay.setAttribute('data-src', key); // Añadimos un atributo de datos para identificar la imagen
+        const container = document.querySelector('.container');
+        container.appendChild(overlay); // Añadimos el overlay a la página
+        positionOverlay(overlay, image); // Posicionamos el overlay sobre la imagen
+      }
+
+      if (currentNumber === 1) { // Si el número actual es 1, deshabilitar la interacción con las imágenes
+        interactionEnabled = false;
+      }
+    }
+
+    function positionOverlay(overlay, image) {
+        const containerRect = document.querySelector('.container').getBoundingClientRect();
+        const imageRect = image.getBoundingClientRect();
+        
+        // Calcular la posición relativa de la imagen dentro del contenedor
+        const imageCenterX = imageRect.left - containerRect.left + imageRect.width / 2;
+        const imageCenterY = imageRect.top - containerRect.top + imageRect.height / 2;
+      
+        // Ajustar la posición del overlay para que esté en el centro de la imagen
+        overlay.style.left = imageCenterX + 'px';
+        overlay.style.top = imageCenterY + 'px';
+      }
+      
+
+    function reloadPage() {
+      location.reload(); // Recargar la página
+    }
+  </script>
+  <script>
+    // Cargar el archivo icons.html
+      fetch('../../icons/icons.html')
+        .then(response => response.text())
+        .then(data => {
+          // Insertar el contenido de icons.html al final del body
+          document.body.insertAdjacentHTML('beforeend', data);
+          
+          // Agregar eventos de clic a los iconos
+          document.getElementById('goToIndex').addEventListener('click', function() {
+            window.location.href = '../../index.html';
+          });
+  
+          document.getElementById('goBack').addEventListener('click', function() {
+            window.history.back();
+          });
+        })
+        .catch(error => console.error('Error loading icons:', error));
+    </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>
