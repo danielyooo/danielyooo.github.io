@@ -7,54 +7,58 @@
   <link rel="stylesheet" href="../../../../styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
   <style>
     /* Estilos generales */
-
-  
     .container {
-      max-width: 900px;
+      max-width: 100%; /* Ancho máximo del contenedor */
       margin: 0 auto;
       padding: 10px;
-      max-height: 400px;;
-      
     }
-    .duplicated-symbol {
-        width: 80px; /* Ancho de los símbolos duplicados */
-        height: 80px; /* Altura de los símbolos duplicados */
-        margin-right: 5px; /* Espacio entre los símbolos duplicados */
-        cursor: pointer; /* Cambiar el cursor al pasar sobre los símbolos */
-        border: 2px solid transparent; /* Borde transparente */
-        transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
-      }
-      
-      .duplicated-symbol:hover {
-        border-color: #c7430f; /* Cambia el color del borde a naranja cuando se pasa el mouse sobre los símbolos */
-      }
-      
-      .selected-symbol {
-        border-color: #c7430f; /* Cambia el color del borde a naranja cuando se selecciona el símbolo */
-      }
-      
-    /* Estilos para las imágenes adicionales debajo de las imágenes duplicadas */
+    
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .statue-image {
+      width: 30%; /* Ajustar el ancho de las imágenes de estatuas */
+      max-width: 150px; /* Ancho máximo de las imágenes de estatuas */
+      height: auto; /* Altura automática para mantener la proporción */
+      margin: 5px;
+    }
+    
+    /* Estilos para las imágenes duplicadas */
     .duplicated-container {
-        display: flex;
-        flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
-        overflow-x: auto; /* Agrega desplazamiento horizontal si hay muchas imágenes */
-        overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
-        margin-top: 10px; /* Espacio entre las imágenes duplicadas y las imágenes adicionales */
-        margin-bottom: 0px;
-        max-width: 100%; /* Ancho máximo del contenedor */
-        max-height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-  
+    
     .symbol {
-      width: 100px; /* Ancho de las imágenes adicionales */
-      height: 100px; /* Altura de las imágenes adicionales */
-      margin-right: 10px; /* Espacio entre las imágenes adicionales */
-      
+      width: 15%; /* Ajustar el ancho de los símbolos */
+      max-width: 80px; /* Ancho máximo de los símbolos */
+      height: auto; /* Altura automática para mantener la proporción */
+      margin: 5px;
     }
-  
-    /* Resto de tus estilos CSS */
+    
+    /* Estilos para los símbolos duplicados */
+    .duplicated-symbol {
+      width: 15%; /* Ajustar el ancho de los símbolos duplicados */
+      max-width: 80px; /* Ancho máximo de los símbolos duplicados */
+      height: auto; /* Altura automática para mantener la proporción */
+      margin: 5px;
+      cursor: pointer; /* Cambiar el cursor al pasar sobre los símbolos */
+      border: 2px solid transparent; /* Borde transparente */
+      transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+    }
+    
+    .duplicated-symbol:hover {
+      border-color: #c7430f; /* Cambia el color del borde a naranja cuando se pasa el mouse sobre los símbolos */
+    }
+    
+    .selected-symbol {
+      border-color: #c7430f; /* Cambia el color del borde a naranja cuando se selecciona el símbolo */
+    }
   </style>
-  
 </head>
 <body>
   <div class="container">
@@ -78,105 +82,84 @@
       </p>
     </section>
     <div class="selected-images-column" id="selected-images"></div>
-    
   </div>
 
   <!-- JavaScript para cargar los iconos -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Selecciona todas las imágenes de las estatuas
-        var statueImages = document.querySelectorAll(".statue-image");
-        var selectedImagesColumn = document.getElementById("selected-images");
-        var duplicatedImages = {}; // Objeto para mantener un registro de las imágenes duplicadas
+      var statueImages = document.querySelectorAll(".statue-image");
+      var selectedImagesColumn = document.getElementById("selected-images");
+      var duplicatedImages = {}; // Objeto para mantener un registro de las imágenes duplicadas
       
-        // Función para agregar evento de clic a los símbolos
-        function addSymbolClickEvent(container) {
-          var symbols = container.querySelectorAll(".duplicated-symbol");
-          symbols.forEach(function(symbol) {
-            symbol.addEventListener("click", function() {
-              // Obtener el contenedor del símbolo
-              var container = symbol.parentElement;
-      
-              // Ocultar todos los símbolos excepto el clicado y marcarlo
-              symbols.forEach(function(s) {
-                if (s !== symbol) {
-                  s.style.display = "none";
-                } else {
-                  s.classList.add("selected-symbol");
-                }
-              });
-      
-              // Desmarcar todos los símbolos en el mismo contenedor excepto el clicado
-              var otherSymbols = container.querySelectorAll(".duplicated-symbol");
-              otherSymbols.forEach(function(otherSymbol) {
-                if (otherSymbol !== symbol) {
-                  otherSymbol.classList.remove("selected-symbol");
-                }
-              });
+      function addSymbolClickEvent(container) {
+        var symbols = container.querySelectorAll(".duplicated-symbol");
+        symbols.forEach(function(symbol) {
+          symbol.addEventListener("click", function() {
+            var container = symbol.parentElement;
+            symbols.forEach(function(s) {
+              if (s !== symbol) {
+                s.style.display = "none";
+              } else {
+                s.classList.add("selected-symbol");
+              }
+            });
+            var otherSymbols = container.querySelectorAll(".duplicated-symbol");
+            otherSymbols.forEach(function(otherSymbol) {
+              if (otherSymbol !== symbol) {
+                otherSymbol.classList.remove("selected-symbol");
+              }
             });
           });
-        }
-      
-        // Función para mostrar todos los símbolos y desmarcarlos
-        function resetSymbols(symbols) {
-          symbols.forEach(function(symbol) {
-            symbol.style.display = "inline-block"; // Cambio a display inline-block
-            symbol.classList.remove("selected-symbol");
-          });
-        }
-      
-        // Función para duplicar imágenes
-        function duplicateImage(image) {
-          var clonedImage = image.cloneNode(true); // Clona la imagen
-          clonedImage.removeAttribute("id"); // Quita el ID para evitar duplicados
-          var duplicatedContainer = document.createElement("div"); // Crea un nuevo contenedor para la imagen duplicada
-          duplicatedContainer.classList.add("duplicated-container");
-          duplicatedContainer.appendChild(clonedImage); // Agrega la imagen clonada al contenedor
-          selectedImagesColumn.appendChild(duplicatedContainer); // Agrega el contenedor a la columna de imágenes seleccionadas
-          image.classList.add("duplicated"); // Marca la imagen como duplicada
-          duplicatedImages[image.alt] = duplicatedContainer; // Agrega el contenedor al registro
-          // Agregar 6 imágenes adicionales debajo de la imagen duplicada
-          var symbols = [];
-          for (var i = 1; i <= 6; i++) {
-            var symbolImage = document.createElement("img");
-            symbolImage.src = "symbol" + i + ".png";
-            symbolImage.classList.add("symbol", "duplicated-symbol"); // Agrega la clase symbol y duplicated-symbol
-            duplicatedContainer.appendChild(symbolImage);
-            symbols.push(symbolImage);
-          }
-          addSymbolClickEvent(duplicatedContainer); // Agregar evento de clic a los símbolos
-        }
-      
-        // Itera sobre cada imagen de estatua y agrega el evento de clic
-        statueImages.forEach(function(image) {
-          image.addEventListener("click", function() {
-            if (!image.classList.contains("duplicated")) {
-              if (Object.keys(duplicatedImages).length < 3) {
-                duplicateImage(image);
-              }
-            } else {
-              // Si la imagen ya ha sido duplicada, remuévela al hacer clic nuevamente
-              selectedImagesColumn.removeChild(duplicatedImages[image.alt]); // Elimina el contenedor de la imagen duplicada correspondiente
-              image.classList.remove("duplicated"); // Desmarca la imagen como duplicada
-              delete duplicatedImages[image.alt]; // Elimina el contenedor del registro
-            }
-      
-            // Mantén el borde naranja en la imagen original
-            image.style.borderColor = Object.keys(duplicatedImages).includes(image.alt) ? "#c7430f" : "transparent";
-          });
         });
+      }
       
-        // Agregar evento de clic para reiniciar los símbolos
-        selectedImagesColumn.addEventListener("click", function() {
-          var symbols = selectedImagesColumn.querySelectorAll(".duplicated-symbol");
-          resetSymbols(symbols);
+      function resetSymbols(symbols) {
+        symbols.forEach(function(symbol) {
+          symbol.style.display = "inline-block";
+          symbol.classList.remove("selected-symbol");
+        });
+      }
+      
+      function duplicateImage(image) {
+        var clonedImage = image.cloneNode(true);
+        clonedImage.removeAttribute("id");
+        var duplicatedContainer = document.createElement("div");
+        duplicatedContainer.classList.add("duplicated-container");
+        duplicatedContainer.appendChild(clonedImage);
+        selectedImagesColumn.appendChild(duplicatedContainer);
+        image.classList.add("duplicated");
+        duplicatedImages[image.alt] = duplicatedContainer;
+        var symbols = [];
+        for (var i = 1; i <= 6; i++) {
+          var symbolImage = document.createElement("img");
+          symbolImage.src = "symbol" + i + ".png";
+          symbolImage.classList.add("symbol", "duplicated-symbol");
+          duplicatedContainer.appendChild(symbolImage);
+          symbols.push(symbolImage);
+        }
+        addSymbolClickEvent(duplicatedContainer);
+      }
+      
+      statueImages.forEach(function(image) {
+        image.addEventListener("click", function() {
+          if (!image.classList.contains("duplicated")) {
+            if (Object.keys(duplicatedImages).length < 3) {
+              duplicateImage(image);
+            }
+          } else {
+            selectedImagesColumn.removeChild(duplicatedImages[image.alt]);
+            image.classList.remove("duplicated");
+            delete duplicatedImages[image.alt];
+          }
+          image.style.borderColor = Object.keys(duplicatedImages).includes(image.alt) ? "#c7430f" : "transparent";
         });
       });
+      
+      selectedImagesColumn.addEventListener("click", function() {
+        var symbols = selectedImagesColumn.querySelectorAll(".duplicated-symbol");
+        resetSymbols(symbols);
+      });
+    });
   </script>
-  
-  
-  
-  
-  
 </body>
 </html>
