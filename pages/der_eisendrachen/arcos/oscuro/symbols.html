@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tu Título Aquí</title>
+  <title>Símbolos para el Arco Oscuro</title>
   <link rel="stylesheet" href="../../../../styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
   <style>
     /* Estilos generales */
@@ -30,22 +30,28 @@
     .duplicated-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start; /* Alinear los elementos de izquierda a derecha */
+      margin-top: 10px; /* Espacio entre los contenedores duplicados */
+    }
+    
+    .symbol-container {
+      display: flex;
+      flex-direction: column; /* Apilar los símbolos en una columna */
+      align-items: center; /* Centrar los símbolos horizontalmente */
+      margin-right: 10px; /* Espacio entre los contenedores de símbolos */
     }
     
     .symbol {
-      width: 15%; /* Ajustar el ancho de los símbolos */
-      max-width: 80px; /* Ancho máximo de los símbolos */
-      height: auto; /* Altura automática para mantener la proporción */
-      margin: 5px;
+      width: 80px; /* Ancho de los símbolos */
+      height: 80px; /* Altura de los símbolos */
+      margin-top: 5px; /* Espacio entre los símbolos */
     }
     
     /* Estilos para los símbolos duplicados */
     .duplicated-symbol {
-      width: 15%; /* Ajustar el ancho de los símbolos duplicados */
-      max-width: 80px; /* Ancho máximo de los símbolos duplicados */
-      height: auto; /* Altura automática para mantener la proporción */
-      margin: 5px;
+      width: 80px; /* Ancho de los símbolos duplicados */
+      height: 80px; /* Altura de los símbolos duplicados */
+      margin-right: 5px; /* Espacio entre los símbolos duplicados */
       cursor: pointer; /* Cambiar el cursor al pasar sobre los símbolos */
       border: 2px solid transparent; /* Borde transparente */
       transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
@@ -125,16 +131,20 @@
         clonedImage.removeAttribute("id");
         var duplicatedContainer = document.createElement("div");
         duplicatedContainer.classList.add("duplicated-container");
-        duplicatedContainer.appendChild(clonedImage);
         selectedImagesColumn.appendChild(duplicatedContainer);
         image.classList.add("duplicated");
         duplicatedImages[image.alt] = duplicatedContainer;
+        
+        var symbolContainer = document.createElement("div");
+        symbolContainer.classList.add("symbol-container");
+        duplicatedContainer.appendChild(symbolContainer);
+        
         var symbols = [];
         for (var i = 1; i <= 6; i++) {
           var symbolImage = document.createElement("img");
           symbolImage.src = "symbol" + i + ".png";
           symbolImage.classList.add("symbol", "duplicated-symbol");
-          duplicatedContainer.appendChild(symbolImage);
+          symbolContainer.appendChild(symbolImage);
           symbols.push(symbolImage);
         }
         addSymbolClickEvent(duplicatedContainer);
