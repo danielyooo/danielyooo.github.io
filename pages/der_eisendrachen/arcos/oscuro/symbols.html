@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Símbolos para el Arco Oscuro</title>
+  <title>Tu Título Aquí</title>
   <link rel="stylesheet" href="../../../../styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
   <style>
     /* Estilos generales */
@@ -29,29 +29,29 @@
     /* Estilos para las imágenes duplicadas */
     .duplicated-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start; /* Alinear los elementos de izquierda a derecha */
+      flex-direction: column;
+      align-items: center;
       margin-top: 10px; /* Espacio entre los contenedores duplicados */
     }
     
     .symbol-container {
       display: flex;
-      flex-direction: column; /* Apilar los símbolos en una columna */
-      align-items: center; /* Centrar los símbolos horizontalmente */
-      margin-right: 10px; /* Espacio entre los contenedores de símbolos */
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
     }
     
     .symbol {
       width: 80px; /* Ancho de los símbolos */
       height: 80px; /* Altura de los símbolos */
-      margin-top: 5px; /* Espacio entre los símbolos */
+      margin-right: 5px; /* Espacio entre los símbolos */
+      margin-bottom: 5px; /* Espacio entre filas de símbolos */
     }
     
     /* Estilos para los símbolos duplicados */
     .duplicated-symbol {
       width: 80px; /* Ancho de los símbolos duplicados */
       height: 80px; /* Altura de los símbolos duplicados */
-      margin-right: 5px; /* Espacio entre los símbolos duplicados */
       cursor: pointer; /* Cambiar el cursor al pasar sobre los símbolos */
       border: 2px solid transparent; /* Borde transparente */
       transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
@@ -137,6 +137,7 @@
         
         var symbolContainer = document.createElement("div");
         symbolContainer.classList.add("symbol-container");
+        duplicatedContainer.appendChild(clonedImage);
         duplicatedContainer.appendChild(symbolContainer);
         
         var symbols = [];
