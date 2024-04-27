@@ -98,7 +98,7 @@ hr { /*Líne horizontal*/
 .title {
   color: rgb(235, 87, 2); /* Texto blanco */
   text-align: center; /* Centra el texto horizontalmente */
-  margin-bottom: 100px; /* Agrega margen inferior */
+  margin-bottom: 50px; /* Agrega margen inferior */
 }
 
 .title-with-image img {
