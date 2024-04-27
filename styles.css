@@ -31,7 +31,7 @@ body {
 hr { /*Líne horizontal*/
   width: 100%; /* Ancho completo de la pantalla */
   height: 2px; /* Altura de la línea */
-  background-color: c7430f; /* Color naranja */
+  background-color: #c7430f; /* Color naranja */
   border: none; /* Eliminar borde predeterminado */
   margin: 0; /* Eliminar márgenes predeterminados */
 }
