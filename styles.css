@@ -58,7 +58,7 @@ body {
   flex-direction: column;
   align-items: center; /* Centra verticalmente las imágenes */
   max-height: 330px; /* Altura máxima para la columna de imágenes seleccionadas */
-  overflow-y: auto; /* Agrega desplazamiento vertical si hay más de 3 imágenes */
+  overflow-y: flex; /* Agrega desplazamiento vertical si hay más de 3 imágenes */
   margin-left: 20px; /* Espacio entre las dos columnas de imágenes */
 }
 .image-container {
