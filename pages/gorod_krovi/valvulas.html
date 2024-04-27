@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Válvulas</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: left;
+    }
+    .green-text {
+        color: green; /* Color de texto verde */
+      }
+    .purple-text {
+        color: rgb(173, 54, 253); /* Color de texto verde */
+      }
+      .bold-text {
+        font-weight: bold; /* Texto en negrita */
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Válvulas</h1>
+    <img src="mapa.png" width="720" height="480"class="responsive-image"><br>
+    <form id="nodeForm">
+      <label for="startNode">Válvula  <span class="green-text">verde</span>:</label>
+      <select id="startNode" name="startNode">
+        <option value="command_dragon">Command Dragon</option>
+        <option value="armory">Armory</option>
+        <option value="department_store">Department Store</option>
+        <option value="infirmary">Infirmary</option>
+        <option value="supply_depot">Supply Depot</option>
+        <option value="tank_factory">Tank Factory</option>
+      </select>
+      <label for="endNode">Cilindro  <span class="purple-text">violeta</span> atascado:</label>
+      <select id="endNode" name="endNode">
+        <option value="command_dragon">Command Dragon</option>
+        <option value="armory">Armory</option>
+        <option value="department_store">Department Store</option>
+        <option value="infirmary">Infirmary</option>
+        <option value="supply_depot">Supply Depot</option>
+        <option value="tank_factory">Tank Factory</option>
+      </select>
+      <button type="button" onclick="findPath()">Buscar camino:</button>
+    </form>
+  
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Definir la red de nodos y conexiones
+    const network = {
+      "command_dragon": ["supply_depot", "department_store", "infirmary"],
+      "armory": ["supply_depot", "tank_factory", "department_store"],
+      "department_store": ["armory", "infirmary", "command_dragon"],
+      "infirmary": ["department_store", "tank_factory", "command_dragon"],
+      "supply_depot": ["command_dragon", "armory", "tank_factory"],
+      "tank_factory": ["infirmary", "supply_depot", "armory"]
+    };
+
+    // Función para encontrar el camino de nodos
+    function findPath() {
+      const startNode = document.getElementById("startNode").value;
+      const endNode = document.getElementById("endNode").value;
+  
+      const visited = new Set();
+      const path = [];
+        
+      // Función recursiva para buscar el camino
+      function dfs(currentNode, currentPath) {
+        visited.add(currentNode);
+        currentPath.push(currentNode);
+
+        if (visited.size === Object.keys(network).length && currentNode === endNode) {
+          // Se visitaron todos los nodos y se alcanzó el nodo de llegada, mostrar el camino y terminar la recursión
+          displayPath(currentPath);
+          return true;
+        }
+  
+        for (const neighbor of network[currentNode]) {
+          if (!visited.has(neighbor)) {
+            if (dfs(neighbor, currentPath.slice())) {
+              return true;
+            }
+          }
+        }
+  
+        // No se encontró un camino válido desde este nodo, retroceder
+        visited.delete(currentNode);
+        return false;
+      }
+  
+      // Comenzar la búsqueda desde el nodo de partida
+      dfs(startNode, []);
+
+      // Función para mostrar el camino y el número de conexión
+      function displayPath(path) {
+        let result = "<br>Camino a seguir: <br><br>";
+        for (let i = 0; i < path.length - 1; i++) {
+          const currentNode = path[i];
+          const nextNode = path[i + 1];
+          const connection = network[currentNode].indexOf(nextNode) + 1;
+          const currentNodeName = capitalizeFirstLetter(currentNode.replace("_", " "));
+          result += `<span class="bold-text">${currentNodeName}</span> señala al <span class="bold-text">${connection}</span> <br> `;
+        }
+        const endNodeName = capitalizeFirstLetter(endNode.replace("_", " "));
+        result += `<span class="bold-text">${endNodeName}</span> es el destino final`;
+        document.getElementById("result").innerHTML = result;
+      }
+
+      // Función para capitalizar la primera letra de una cadena
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+    }
+  </script>
+  <script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
