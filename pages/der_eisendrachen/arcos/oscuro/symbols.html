@@ -99,25 +99,24 @@
       
       function addSymbolClickEvent(container) {
         var symbols = container.querySelectorAll(".duplicated-symbol");
+        
+        // Variable para almacenar el símbolo seleccionado en este contenedor
+        var selectedSymbol = null;
+        
         symbols.forEach(function(symbol) {
-          symbol.addEventListener("click", function() {
-            var container = symbol.parentElement;
-            symbols.forEach(function(s) {
-              if (s !== symbol) {
-                s.style.display = "none";
-              } else {
-                s.classList.add("selected-symbol");
-              }
+            symbol.addEventListener("click", function() {
+                // Si ya hay un símbolo seleccionado, deseleccionarlo
+                if (selectedSymbol) {
+                    selectedSymbol.classList.remove("selected-symbol");
+                }
+                // Marcar el símbolo actual como seleccionado
+                symbol.classList.add("selected-symbol");
+                // Actualizar el símbolo seleccionado para este contenedor
+                selectedSymbol = symbol;
             });
-            var otherSymbols = container.querySelectorAll(".duplicated-symbol");
-            otherSymbols.forEach(function(otherSymbol) {
-              if (otherSymbol !== symbol) {
-                otherSymbol.classList.remove("selected-symbol");
-              }
-            });
-          });
         });
-      }
+    }
+    
       
       function resetSymbols(symbols) {
         symbols.forEach(function(symbol) {
