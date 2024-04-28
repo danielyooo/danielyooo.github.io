@@ -23,7 +23,7 @@
     }
     .container h2 {
       text-align: center;
-      max-width: 90%; /* Ancho máximo del contenedor */
+      max-width: 100%; /* Ancho máximo del contenedor */
     }
     .container h1{
       margin-top: 0;
@@ -44,18 +44,37 @@
       color: white; /* Color de texto */
       border-radius: 5px; /* Borde redondeado */
     }
+    .texto {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 38%;
+    }
+    .texto br {
+      display: block; /* Hace que los saltos de línea sean tratados como bloques */
+      content: ""; /* Añade un contenido vacío para forzar el salto de línea */
+    }
 
     .button:hover {
       background-color: #45a049; /* Cambio de color al pasar por encima */
+    }
+    .green-text {
+      color: green; /* Color de texto verde */
+    }
+
+    .purple-text {
+      color: rgb(173, 54, 253); /* Color de texto violeta */
+    }
+
+    .bold-text {
+      font-weight: bold; /* Texto en negrita */
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1 class="title">Válvulas</h1>
-    <img src="mapa.png" alt="Mapa" class="responsive-image" width="720" height="480>
+    <img src="mapa.png" alt="Mapa" class="responsive-image" width="720" height="480">
     <form id="nodeForm">
-      <h2><label for="startNode">Válvula verde:</label>
+      <h2><label for="startNode">Válvula <span class="green-text">verde</span>:</label>
       <select id="startNode" name="startNode">
         <option value="command_dragon">Command Dragon</option>
         <option value="armory">Armory</option>
@@ -64,7 +83,7 @@
         <option value="supply_depot">Supply Depot</option>
         <option value="tank_factory">Tank Factory</option>
       </select>
-      <label for="endNode">Cilindro violeta atascado:</label>
+      <label for="endNode">Cilindro <span class="purple-text">violeta</span> atascado:</label>
       <select id="endNode" name="endNode">
         <option value="command_dragon">Command Dragon</option>
         <option value="armory">Armory</option>
@@ -126,16 +145,18 @@
 
       // Función para mostrar el camino y el número de conexión
       function displayPath(path) {
-        let result = "<br>Camino a seguir: <br><br>";
+        let result = `<h2><span class="bold-text">Camino a seguir:</span></h2>`;
         for (let i = 0; i < path.length - 1; i++) {
           const currentNode = path[i];
           const nextNode = path[i + 1];
           const connection = network[currentNode].indexOf(nextNode) + 1;
           const currentNodeName = capitalizeFirstLetter(currentNode.replace("_", " "));
-          result += `<span class="bold-text">${currentNodeName}</span> señala al <span class="bold-text">${connection}</span> <br> `;
+          result += `<span class="texto"><span class="bold-text">${currentNodeName}</span> señala al <span class="bold-text">${connection}</span> <br></span>`;
+
         }
         const endNodeName = capitalizeFirstLetter(endNode.replace("_", " "));
-        result += `<span class="bold-text">${endNodeName}</span> es el destino final`;
+        result += `<span class="texto"><span class="bold-text">${endNodeName}</span> es el destino final</span>`;
+
         document.getElementById("result").innerHTML = result;
       }
 
