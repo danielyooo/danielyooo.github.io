@@ -35,12 +35,8 @@
       }
       
       @media only screen and (max-width: 600px) {
-        .container img {
-          width: 30%; /* Ancho relativo de las imágenes en dispositivos móviles */
-        }
-        .container img:nth-child(1),
-        .container img:nth-child(6) {
-          width: 80%; /* Ancho relativo de las imágenes superior e inferior en dispositivos móviles */
+        .container {
+          grid-template-columns: repeat(3, 1fr); /* Tres columnas para dispositivos con al menos 600px de ancho */
         }
       }
       
