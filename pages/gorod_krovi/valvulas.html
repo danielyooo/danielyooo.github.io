@@ -121,7 +121,10 @@
     function findPath() {
       const startNode = document.getElementById("startNode").value;
       const endNode = document.getElementById("endNode").value;
-
+      if (startNode === endNode) {
+        document.getElementById("result").innerHTML = "<p>La luz verde y el cilindro no se pueden encontrar en el mismo sitio.</p>";
+        return;
+      }
       const visited = new Set();
       const path = [];
 
