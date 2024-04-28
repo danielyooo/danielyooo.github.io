@@ -14,32 +14,33 @@
       position: relative; /* Posición relativa para imágenes con números superiores */
     }
     .container img {
-      width: 40%; /* Ancho relativo de las imágenes */
+      width: 80%; /* Ancho relativo de las imágenes */
       max-width: 150px; /* Ancho máximo de cada imagen */
       margin: 10px; /* Espacio entre las imágenes */
       cursor: pointer; /* Cambiar cursor a puntero para indicar que se puede hacer clic */
       position: relative; /* Posición relativa para alinear los números */
     }
     .number-overlay {
-      position: absolute; /* Posición absoluta para los números superiores */
-      top: 0; /* Ajustar la posición vertical al borde superior del contenedor */
-      left: 50%; /* Ajustar la posición horizontal al centro del contenedor */
-      transform: translateX(-50%); /* Alinear al centro horizontalmente */
-      background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-      padding: 3px 8px; /* Espacio alrededor del número */
-      border-radius: 5px; /* Bordes redondeados */
-      font-weight: bold;
-      color: white; /* Color del texto */
-      font-size: 12px; /* Tamaño de fuente */
-    }
-
-    @media only screen and (max-width: 600px) {
-      .container img {
-        width: 80%; /* Ancho relativo de las imágenes para dispositivos móviles */
-        max-width: 100%; /* Ancho máximo de las imágenes para dispositivos móviles */
+        position: absolute; /* Posición absoluta para los números superiores */
+        top: 0; /* Ajustar la posición vertical al borde superior del contenedor */
+        left: 50%; /* Ajustar la posición horizontal al centro del contenedor */
+        transform: translateX(-50%); /* Alinear al centro horizontalmente */
+        background-color: rgb(0, 0, 0); /* Fondo semitransparente */
+        padding: 5px 10px; /* Espacio alrededor del número */
+        border-radius: 5px; /* Bordes redondeados */
+        font-weight: bold;
       }
-    }
-
+      
+      @media only screen and (max-width: 600px) {
+        .container img {
+          width: 80%; /* Ajustar el ancho de las imágenes en dispositivos móviles */
+        }
+        .number-overlay {
+          left: 50%; /* Ajustar la posición horizontal al centro del contenedor en dispositivos móviles */
+          transform: translateX(-50%); /* Alinear al centro horizontalmente en dispositivos móviles */
+        }
+      }
+      
     .reload-button {
       margin-top: 20px;
       background-color: transparent; /* Fondo transparente */
