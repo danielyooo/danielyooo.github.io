@@ -25,17 +25,22 @@
       text-align: center;
       max-width: 100%; /* Ancho máximo del contenedor */
     }
+    .contenedor {
+      text-align: center; /* Centra horizontalmente el contenido */
+      margin-top: 50px; /* Opcional: ajusta el margen superior según sea necesario */
+    }
     .container h1{
       margin-top: 0;
     }
 
     .container img {
-      width: 50%; /* Mapa con ancho del 100% del contenedor */
+      width: 80%; /* Mapa con ancho del 100% del contenedor */
       height: auto; /* Altura automática */
       margin-bottom: 10px; /* Espacio entre el mapa y el formulario */
     }
 
     .button {
+      display:auto;
       padding: 10px 20px; /* Espacio interno del botón */
       font-size: 16px; /* Tamaño de fuente */
       cursor: pointer; /* Cambiar cursor al pasar por encima */
@@ -46,7 +51,7 @@
     }
     .texto {
     text-align: left; /* Alinea el texto a la izquierda */
-    margin-left: 38%;
+    margin-left: 30%;
     }
     .texto br {
       display: block; /* Hace que los saltos de línea sean tratados como bloques */
@@ -54,7 +59,7 @@
     }
 
     .button:hover {
-      background-color: #45a049; /* Cambio de color al pasar por encima */
+      background-color: #cf5301; /* Cambio de color al pasar por encima */
     }
     .green-text {
       color: green; /* Color de texto verde */
@@ -92,8 +97,11 @@
         <option value="supply_depot">Supply Depot</option>
         <option value="tank_factory">Tank Factory</option>
       </select>
+     
+    </form></h2> 
+    <div class="contenedor">
       <button type="button" class="button" onclick="findPath()">Buscar camino</button>
-    </form></h2>
+    </div>
     <div id="result"></div>
   </div>
 
