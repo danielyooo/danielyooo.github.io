@@ -33,11 +33,22 @@
       
       @media only screen and (max-width: 600px) {
         .container img {
-          width: 20%; /* Ancho relativo de las imágenes */
+          width: 15%; /* Ancho relativo de las imágenes */
           max-width: 100px; /* Ancho máximo de cada imagen */
-          margin: 10px; /* Espacio entre las imágenes */
+          margin: 5px; /* Espacio entre las imágenes */
           cursor: pointer; /* Cambiar cursor a puntero para indicar que se puede hacer clic */
           position: relative; /* Posición relativa para alinear los números */
+        }
+        .number-overlay {
+          font-size: 12px;
+          position: absolute; /* Posición absoluta para los números superiores */
+          top: 0; /* Ajustar la posición vertical al borde superior del contenedor */
+          left: 50%; /* Ajustar la posición horizontal al centro del contenedor */
+          transform: translateX(-50%); /* Alinear al centro horizontalmente */
+          background-color: rgb(0, 0, 0); /* Fondo semitransparente */
+          padding: 5px 10px; /* Espacio alrededor del número */
+          border-radius: 5px; /* Bordes redondeados */
+          font-weight: bold;
         }
       }
       
