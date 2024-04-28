@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
       position: relative; /* Posición relativa para imágenes con números superiores */
     }
     .container img {
-      width: 80%; /* Ancho relativo de las imágenes */
+      width: 40%; /* Ancho relativo de las imágenes */
       max-width: 150px; /* Ancho máximo de cada imagen */
       margin: 10px; /* Espacio entre las imágenes */
       cursor: pointer; /* Cambiar cursor a puntero para indicar que se puede hacer clic */
@@ -32,8 +32,9 @@
       }
       
       @media only screen and (max-width: 600px) {
-        .container {
-          grid-template-columns: repeat(3, 1fr); /* Tres columnas para dispositivos con al menos 600px de ancho */
+        .number-overlay {
+          left: 50%; /* Ajustar la posición horizontal al centro del contenedor en dispositivos móviles */
+          transform: translateX(-50%); /* Alinear al centro horizontalmente en dispositivos móviles */
         }
       }
       
