@@ -4,29 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Easter Eggs(Der Eisendrachen)</title>
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../../../styles.css">
 </head>
 <body>
   <div class="container">
     <h1 class="title">Mini Easter Eggs(Der Eisendrachen)</h1>
     <div class="options">
       <div class="column">
-        <button class="option-button" id="canción">Canción Secreta</button>
-        <button class="option-button" id="casco">Casco de Panzer </button>
+        <button class="option-button" id="music/cancion">Canción Secreta</button>
+        <button class="option-button" id="casco/casco">Casco de Panzer </button>
       </div>
         <div class="column">
-        <button class="option-button" id="chicle">Chicle Secreto </button>
-        <button class="option-button" id="pared">Arma de Pared Secreta</button>
+        <button class="option-button" id="chicle/chicle">Chicle Gratis </button>
+        <button class="option-button" id="brm/brm">Arma de Pared Secreta</button>
     </div>
     <div class="functions inactive" id="functionsContainer">
       <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
     </div>
   </div>
-  <script src="../../script.js"></script>
+  <script src="../../../../script.js"></script>
   <!-- JavaScript para cargar los iconos -->
   <script>
     // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
+    fetch('../../../../icons/icons.html')
       .then(response => response.text())
       .then(data => {
         // Insertar el contenido de icons.html al final del body
@@ -34,7 +34,7 @@
         
         // Agregar eventos de clic a los iconos
         document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
+          window.location.href = '../../../../index.html';
         });
 
         document.getElementById('goBack').addEventListener('click', function() {

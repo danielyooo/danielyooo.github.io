@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicle gratis (Der Eisendrachen)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Chicle gratis (Der Eisendrachen)</strong></h1>
+    <img src="chicle_miniee.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+      <p>
+          <div class="title-with-image">
+            Tendremos que recoger la planta en la sala del teleporter antes de viajar en el tiempo <br><br>
+           <img src="planta_small.png" width="600" height="350"class="responsive-image"><br>
+           En el pasado la volveremos a colocar en el mismo sitio. <br><br>
+           <img src="planta_pasado.png" width="600" height="350"class="responsive-image"><br>
+           Al volver la planta habrá crecido y, al interactuar con ella, obtendremos el chicle. <br><br>
+           <img src="chicle_final.png" width="600" height="350"class="responsive-image"><br>
+
+          </p>
+</section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../script.js"></script>
+   <!-- JavaScript para cargar los iconos -->
+   <script>
+    // Cargar el archivo icons.html
+    fetch('../../../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>

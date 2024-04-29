@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ragnarok (Der Eisendrachen)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Ragnarok (Der Eisendrachen)</strong></h1>
+    <img src="ragnarok_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+      <p>
+          <div class="title-with-image">
+
+           <strong>Primera pieza: </strong>Tendremos que esperar a que sean las pruebas del cohete y bajaremos esta palanca.<br>
+           <img src="ragnarok2.png" width="600" height="350"class="responsive-image"><br>
+           Rápidamente entraremos en la zona segura, antes de que se abran las puertas y esperaremos para accionar un botón, cuando las tres luces se pongan en verde. La pieza aparecerá en el teleporter. <br>
+           <img src="ragnarok3.png" width="600" height="350"class="responsive-image"><br>
+           <strong>Segunda pieza: </strong>Tendremos que matar a un panzer y este nos la dará al morir.<br>
+           <img src="panzer_pasado.png" width="600" height="350"class="responsive-image"><br>
+           <strong>Tercera pieza: </strong>Tendremos que matar un grupo de zombies con la trampa tesla. También contará si matamos a un panzer, y así obtendremos dos piezas a la vez .<br>
+           <img src="ragnar_trampa.png" width="600" height="350"class="responsive-image"><br>
+           Para recoger esta pieza miraremos al cielo y la encontraremos en el aire .<br>
+           <img src="ragnarok1.png" width="600" height="350"class="responsive-image"><br>
+           Utilizaremos la lanzadera que pase por encima de la pieza (puede cambiar), y la recogeremos.
+           <img src="ragnarok_aire.png" width="600" height="350"class="responsive-image"><br>
+           <strong>Fabricar: </strong>Por último iremos a cualquier mesa de fabricación y las construiremos .<br>
+           <img src="ragnarok_final.png" width="600" height="350"class="responsive-image"><br>
+
+          </p>
+</section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../script.js"></script>
+   <!-- JavaScript para cargar los iconos -->
+   <script>
+    // Cargar el archivo icons.html
+    fetch('../../../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>
