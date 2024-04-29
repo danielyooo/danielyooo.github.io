@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easter Egg (Der Eisendrachen)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Easter Egg (Der Eisendrachen)</strong></h1>
+    <img src="easter_egg.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> Tendremos que tener tantos arcos mejorados, como jugadores. Si es en solo, un arco; si es en dúo, dos arcos; si es en trío, tres arcos; y si son cuatro, pues 4 arcos mejorados<br>
+             Una vez tengamos al menos un arco mejorado iremos con el arco NORMAL a la sala del teleporter. Dispararemos flechas a las bolas que se encuentran encima hasta que todas estas se vuelvan naranjas. <br>
+             <img src="tp_arcon_normal.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Chispas:</strong><br>
+             A partir de ese momento una chispa aparecerá por el mapa y tendremos que dispararle con un arco mejorado. Si no disparas a tiempo (2 min) se oirá un sonido de cancelación y tendrás que apsar de ronda para volver a aintentarlo. <br> 
+             Las ubicaciones de las chispas son las siguientes (este orden es el más rápido): <br>
+             Ordenador en la sala del segundo dragón: <br>
+             <img src="chispas/chispa1.png" width="600" height="350"class="responsive-image"><br>
+             Reloj en la sala del segundo dragón: <br>
+             <img src="chispas/chispa2.png" width="600" height="350"class="responsive-image"><br>
+             Reloj en el camino de la torre del reloj a la sala del segundo dragón por la parte superior: <br>
+             <img src="chispas/chispa3.png" width="600" height="350"class="responsive-image"><br>
+             En el aparato de la sala donde se activa la electricidad: <br>
+             <img src="chispas/chispa4.png" width="600" height="350"class="responsive-image"><br>
+             En la bola del mundo del cuarto de Samantha: <br>
+             <img src="chispas/chispa5.png" width="600" height="350"class="responsive-image"><br>
+             En las cajas de la sala que está encima del Doble-Tap: <br>
+             <img src="chispas/chispa6.png" width="600" height="350"class="responsive-image"><br>
+             En el coche entre el Dople-Tap y el Spawn: <br>
+             <img src="chispas/chispa7.png" width="600" height="350"class="responsive-image"><br>
+             En la mesa enfrente del Quick Revive: <br>
+             <img src="chispas/chispa8.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Pasado:</strong> Una vez hecho esto la luz del teleporter se volverá violeta y podremos viajar al pasado.<br>
+             <img src="viajar_pasado.png" width="600" height="350"class="responsive-image"><br>
+             Cuando estemos en el pasado tendremos que coger 2 objetos (un cilindro azul y unos fusibles) y apuntar el código de la caja fuerte (Los símbolos pueden ser, un rayo, un círculo, una flecha o un cuadrado).<br>
+             <img src="cilindro_pasado.png" width="600" height="350"class="responsive-image"><br>
+             <img src="fusible_pasado1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="fusibles_pasado.png" width="600" height="350"class="responsive-image"><br>
+             <img src="codigo_pasadp.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
