@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calavera de Nan Sapwe (Zetzubou No Shima)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Calavera de Nan Sapwe (Zetzubou No Shima)</strong></h1>
+    <img src="calavera_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             Siguiendo el camino a la derecha del spawn, llegaremos a la zona del altar de las calaveras.<br>
+             <img src="altar.png" width="600" height="350"class="responsive-image"><br>
+             En medio, veremos 4 calaveras con símbolos.<br>
+             <img src="calaveras.png" width="600" height="350"class="responsive-image"><br>
+             Tendremos que llevar cada calavera a su correspondiente pedestal, fijándonos en los símbolos, y protegerlas de los zombies.<br>
+             <img src="pedestal.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Localizaciones de los pedestales:</strong><br>
+             <img src="pedestal1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="pedestal2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="pedestal3.png" width="600" height="350"class="responsive-image"><br>
+             <img src="pedestal4.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Retornar calaveras y ritual:</strong> Una vez devolvamos las calaveras al altar. Una puerta se abrirá y comenzará un ritual. Mataremos a los guardianes que aparezcan, recargando la calavera.<br>
+             <img src="ritual.png" width="600" height="350"class="responsive-image"><br>
+             Una vez finalizado podremos recoger la calavera de Nan Sapwe.<br>
+             <img src="calavera_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

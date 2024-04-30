@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masamune (Zetzubou No Shima)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Masamune (Zetzubou No Shima)</strong></h1>
+    <img src="masamune_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+              <strong>Requisitos: Tener la KT-4 y la calavera de Nan Sapwe. </strong> <br>
+             <strong>Primera parte:</strong> Con la KT-4, iremos a la telaraña que está a la izquierda del LAB A y le dispararemos. <br>
+             <img src="telaraña.png" width="600" height="350"class="responsive-image"><br>
+             Mataremos a la araña, disparandole en la boca y luego recogeremos el colmillo.<br>
+             <img src="araña.png" width="600" height="350"class="responsive-image"><br>
+             <img src="colmillo.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte:</strong> Con el escudo cargado de electricidad, (entrar aquí si no sabes como hacerlo:
+             <button class="option-button" id="../retos/retos">Retos</button>
+             ) iremos al LAB B y electrificaremos el panel de control. Si estamos solos, entraremos y la jaula se cerrará sola, pero si estamos en cooperativo otro jugador tendrá que bajar y subir la jaula.<br>
+             <img src="panel.png" width="600" height="350"class="responsive-image"><br>
+             Una vez abajo buscaremos el esqueleto con el tubo azul que nos llevaremos. <br>
+             <img src="esqueleto.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Tercera parte:</strong> Tendremos que llenar el cubo con el agua de arcoíris (de la piedra 115), que se encuentra al tirarnos por las cañerías.<br>
+             <img src="cañerias.png" width="600" height="350"class="responsive-image"><br>
+             Justo cuando pasemos las segunda zona azul, y empecemos la tercera zona verde, le daremos al botón de interactuar y se nos llenará el cubo con este líquido.<br>
+             <img src="arcoiris.png" width="600" height="350"class="responsive-image"><br>
+             Después iremos con la calavera de Nam Sapwe a la zona del agua morada y la usaremos para completar el póster de enfrente del líquido.<br>
+             <img src="poster.png" width="600" height="350"class="responsive-image"><br>
+             Volveremos a la zona submarina, donde obtuvimos la planta para la KT-4 y en la pared de la derecha, al final de la gruta, volveremos a usar la calavera.<br>
+             <img src="pared.png" width="600" height="350"class="responsive-image"><br>
+             Aquí habrá un lugar donde podremos plantar una semilla, que tendremos que regar 3 veces con el agua arcoíris. De esta manera podremos recolecar la planta que formará la última pieza del Masamune.<br>
+             <img src="planta.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Fabricar: </strong>Por último a la derecha de la mesa que usamos para construir la KT-4, habrá otra mesa donde mejoraremos este mismo arma.<br>
+             <img src="masamune_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
