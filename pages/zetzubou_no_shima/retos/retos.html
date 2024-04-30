@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retos (Zetzubou No Shima)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+  <style>
+    /* Estilos para el menú desplegable */
+    #retos {
+      background-color: #0a4414; /* Cambia el color de fondo aquí */
+      border-radius: 10px; /* Ajusta el radio de las esquinas */
+      border: 2px solid rgb(255, 255, 255); /* Añade un borde de 2px de ancho y color negro */
+      color: white; /* Cambia el color del texto a blanco */
+      font-family: Verdana, sans-serif; /* Cambia la fuente del texto */
+      font-weight: bold; /* Hace que el texto sea negrita */
+    }
+  </style>
+</head>
+<body>
+    <div class="title-with-image">
+        <h1 class="title"><strong>Retos (Zetzubou No Shima)</strong></h1>
+        <img src="retos_main.jpg" width="720" height="480" class="responsive-image"><br><br><br>
+        <section>
+            <p>
+                <strong>Completar los retos para ganar recompensas y poder electrificar el escudo.</strong><br>
+                En la zona de las 4 calaveras, tendremos 4 columnas, una para cada jugador. Si nos acercamos a la nuestra veremos los retos que tenemos. Cuando todos los jugadores completen sus retos, cada cierto tiempo caerán rayos en el lugar y si tenemos el escudo equipado, este se electrificará. <br>
+                <br>
+                <strong>Aquí todos los retos con su explicación:</strong> <br>
+            </p>
+        </section>
+        <!-- Menú desplegable -->
+        <label for="retos">Selecciona un reto:</label>
+        <select id="retos">
+            <option selected disabled>RETOS</option>
+            <option value="reto1">(Fácil) Dispara a 5 esporas.</option>
+            <option value="reto2">(Fácil) Riega 5 plantas.</option>
+            <option value="reto3">(Fácil) Destruye 5 telarañas con explosivos.</option>
+            <option value="reto4">(Fácil) Usa una espora para recuperar aire bajo el agua.</option>
+            <option value="reto5">(Fácil) Riega la misma planta 3 veces.</option>
+            <option value="reto6">(Medio) Mata a 20 zombies estando bajo el agua.</option>
+            <option value="reto7">(Medio) Mata a un zombie mutado antes de que se enfurezca.</option>
+            <option value="reto8">(Medio) Usa la trampa del ventilador para matar a 20 zombies.</option>
+            <option value="reto9">(Medio) Mata a 15 zombies atraídos por las plantas.</option>
+            <option value="reto10">(Medio) Mata a 10 zombies infectados por esporas con tiros a la cabeza. </option>
+            <option value="reto11">(Medio) Obtén un potenciador de una planta. </option>
+            <option value="reto12">(Difícil) Usa la trampa de avión para matar a 30 zombies.</option>
+            <option value="reto13">(Difícil) Come una fruta crecida de una planta. </option>
+            <option value="reto14">(Difícil) Vuélales la cabeza a 5 zombies mutados</option>
+            <option value="reto15">(Difícil) Mata a 8 arañas con esporas.</option>
+            <option value="reto16">(Difícil) Mata a 3 zombies mientras mutan.</option>
+
+        </select>
+                    <br>  <br>  <br>
+        <!-- Texto dinámico según la opción seleccionada -->
+        <div id="texto-reto"></div>
+    </div>
+
+    <script src="../../../script.js"></script>
+    <!-- JavaScript para cargar los iconos -->
+    <script>
+        // Cargar el archivo icons.html
+        fetch('../../../icons/icons.html')
+            .then(response => response.text())
+            .then(data => {
+                // Insertar el contenido de icons.html al final del body
+                document.body.insertAdjacentHTML('beforeend', data);
+
+                // Agregar eventos de clic a los iconos
+                document.getElementById('goToIndex').addEventListener('click', function() {
+                    window.location.href = '../../../index.html';
+                });
+
+                document.getElementById('goBack').addEventListener('click', function() {
+                    window.history.back();
+                });
+            })
+            .catch(error => console.error('Error loading icons:', error));
+
+        // Función para mostrar el texto correspondiente al reto seleccionado
+        document.getElementById('retos').addEventListener('change', function() {
+            var seleccion = this.value;
+            var textoReto = document.getElementById('texto-reto');
+            // Lógica para mostrar el texto según la opción seleccionada
+            switch(seleccion) {
+                case 'reto1':
+                    textoReto.textContent = "Debes dispararles a 5 esporas (son unas bolitas naranjas pegadas a las paredes), ya sea la misma o 5 diferentes.";
+                    break;
+                case 'reto2':
+                    textoReto.textContent = "Necesitas regar 5 plantas con cualquier tipo de líquido.";
+                    break;
+                case 'reto3':
+                    textoReto.textContent = " Utiliza las granadas de Widow's Wine para romper 5 telarañas. También puedes hacerlo con la Raygun";
+                    break;
+                case 'reto4':
+                    textoReto.textContent = "Estando bajo el agua, cuando te quedes sin aire, dispárale a una espora para recuperarlo. Ir a la gruta bajo el búnker.";
+                    break;
+                case 'reto5':
+                    textoReto.textContent = "Riega la misma planta un total de tres veces, recuerda que debes pasar de ronda para regarla de nuevo.";
+                    break;
+                case 'reto6':
+                    textoReto.textContent = "Debes estar bajo el agua y matar un total de 20 zombies. Ir a la gruta bajo el búnker.";
+                    break;
+                case 'reto7':
+                    textoReto.textContent = "Debes matar al Thrasher antes de que empiece a correr. Debes de estar lejos de él cuando lo veas. Si estás cerca correrá al verte.";
+                    break;
+                case 'reto8':
+                    textoReto.textContent = "En la sala de la derechas según entras en el búnker, se encuentra esta trampa ventilador. Junta un grupo de zombies y actívala. Debes matar a 20. ";
+                    break;
+                case 'reto9':
+                    textoReto.textContent = "Dando a una semilla agua morada 3 veces, saldrá una planta que atrae a los zombies. Cuando estos lleguen a la planta, TÚ deberás matarlos y no la planta. Tendrás que hacerlo con 15 zombies.";
+                    break;
+                case 'reto10':
+                    textoReto.textContent = "Junta a un grupo de zombies y llévalos hasta una espora. Rómpela y, cuando tengan el gas naranja, mátalos de tiros a la cabeza. Necesitarás matar a 10 así.";
+                    break;
+                case 'reto11':
+                    textoReto.textContent = "Dándole a la semilla agua azul 3 veces te dará un potenciador. A veces, las plantas darán un arma por lo que se recomienda que lo hagas con varias semillas a la vez.";
+                    break;
+                case 'reto12':
+                    textoReto.textContent = "Vé al avión destruido, antes del laboratorio A, junta varios zombies y activa la trampa. Tendrás que matar a 30.";
+                    break;
+                case 'reto13':
+                    textoReto.textContent = "Consigue semillas y cultivala. Tendras que echar agua azul, morada y verde (una por ronda) para que crezca la fruta y luego cómetela.";
+                    break;
+                case 'reto14':
+                    textoReto.textContent = "Debes romper 5 cabezas de Thrashers.";
+                    break;
+                case 'reto15':
+                    textoReto.textContent = "Junta un grupo de arañas y busca una espora. Rompe la espora cuando estén cerca y las arañas explotarán, debes matar un total de 8 arañas.";
+                    break;
+                case 'reto16':
+                    textoReto.textContent = "Junta un grupo de zombies y luego busca una espora. Rompe la espora y tendrán un gas naranja. Uno de ellos podrá conseguir un gas naranja más fuerte, casi rojo, mátalo antes de que se convierte en un Thrasher. Repetir un total de 3 veces.";
+                    break;
+                default:
+                    textoReto.textContent = "";
+            }
+        });
+    </script>
+    <!-- JavaScript para cargar los iconos -->
+</body>
+</html>

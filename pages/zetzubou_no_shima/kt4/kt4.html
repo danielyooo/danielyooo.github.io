@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KT-4 (Zetzubou No Shima)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>KT-4 (Zetzubou No Shima)</strong></h1>
+    <img src="kt4_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Primera parte (Veneno de araña):</strong> <br>Ir al laboratorio A, bajar la jaula, atraer una araña a su interior, subir la jaula y extraer el venono.<br>
+             <img src="atrapar.png" width="600" height="350"class="responsive-image"><br>
+             <img src="veneno.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte (Zombie verde):</strong> <br> En el pantano detrás del laboratorio B, aparecerá un zombie con un brillo verde. Al matarlo nos dará la segunda parte.<br>
+             <img src="verde.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Tercera parte (Planta submarina):</strong> <br> Tendremos que entrar a la parte más profunda del bunker y , según bajamos las escaleras, abrir la sala de la derecha. Esta nos llevará a una gruta submarina y al final de ella encontraremos una planta que podremos recolectar.<br>
+             <img src="sala.png" width="600" height="350"class="responsive-image"><br>
+             <img src="planta.png" width="600" height="350"class="responsive-image"><br>
+             <strong> Fabricar: </strong> <br> Iremos a la planta baja del búnker y, bajando las escaleras al fondo a la izquierda fabricaremos la KT-4 <br>
+             <img src="sala2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="kt4_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
