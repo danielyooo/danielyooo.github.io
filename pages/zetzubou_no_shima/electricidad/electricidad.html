@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activar electricidad (Zetzubou No Shima)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Activar electricidad (Zetzubou No Shima)</strong></h1>
+    <img src="electricidad_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Rellenar cubos:</strong> <br>
+             Tendremos que entrar en Lab A y Lab B a rellenar de cualquier líquido las máquinas. Necesitaremos cubos para esto.<br>
+             <img src="rellenar.png" width="600" height="350"class="responsive-image"><br>
+             Rápidamente, iremos al búnker y abriremos las puertas. Si esperamos mucho tiempo tendremos que repetir el paso de los cubos.<br>
+             <img src="puertas.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Arreglar turbina:</strong> <br>
+             En la sala que está a la izquierda del Pack-A-Punch, accederemos a la electricidad. Nos sumergiremos, cortaremos la telade araña y mataremos a los zombies que aparezcan. <br>
+             <img src="telaraña.png" width="600" height="350"class="responsive-image"><br>
+             Por último al salir del agua, podremos accionar la palanca de la electricidad.<br>
+             <img src="electricidad_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
