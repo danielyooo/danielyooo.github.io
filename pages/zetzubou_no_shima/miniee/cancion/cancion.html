@@ -4,31 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canción Secreta (Zetzubou No Shima)</title>
-  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../../../styles.css">
 </head>
 <body>
     <div class="title-with-image">
     <h1 class="title"><strong>Canción Secreta (Zetzubou No Shima)</strong></h1>
-    <img src="escudo.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <img src="cancion_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
     <section>
         <p>
             <div class="title-with-image">
-             <strong>Primera parte:</strong> Según entramos a la zona del primer dragón puede encontrarse a la derecha, a la izquierda o subiendo las escaleras de la izquierda justo antes de llegar a la zona de los teslas.<br>
-             <img src="escudo1.png" width="600" height="350"class="responsive-image"><br>
-             <strong>Segunda parte:</strong> En la mesa de dentro de la torre del reloj, a la izquierda de las escaleras del patio a la torre o a la derecha de la entrada al segundo dragón .<br>
-             <img src="escudo2.png" width="600" height="350"class="responsive-image"><br>
-             <strong>Tercera parte:</strong> Tendremos que activar la gravedad para recogerlo (Nos quedamos de pies en cada uno de los 4 cuadrados alrededor de la pirámide). Se puede encontrar en la reja de encima de la pirámide, en la pared de encima de la zona del teleporter o encima del Pack-a-Punch<br>
-             <img src="escudo3.png" width="600" height="350"class="responsive-image"><br>
+
+              <strong>Tendremos que buscar tres monos en el mapa e interactuar con ellos.</strong> <br>
+              <strong>Mono 1:</strong> <br> En Laboratorio A, antes de la cueva de la araña, encima de unas cajas.<br>
+             <img src="mono1.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Mono 2 :</strong>  <br>En la zona más alta del Laboratorio B, encima de una mesa.<br>
+             <img src="mono2.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Mono 3 :</strong>  <br> En la zona baja del búnker, a la izquierda de donde se construye la Masamune, encima de una camilla.<br>
+             <img src="mono3.png" width="600" height="350"class="responsive-image"><br>
+            
            </p>
   </section>
    <!-- Más secciones aquí -->
 
 </div>
-<script src="../../../script.js"></script>
+<script src="../../../../script.js"></script>
  <!-- JavaScript para cargar los iconos -->
  <script>
   // Cargar el archivo icons.html
-  fetch('../../../icons/icons.html')
+  fetch('../../../../icons/icons.html')
     .then(response => response.text())
     .then(data => {
       // Insertar el contenido de icons.html al final del body
@@ -36,7 +39,7 @@
       
       // Agregar eventos de clic a los iconos
       document.getElementById('goToIndex').addEventListener('click', function() {
-        window.location.href = '../../../index.html';
+        window.location.href = '../../../../index.html';
       });
 
       document.getElementById('goBack').addEventListener('click', function() {
