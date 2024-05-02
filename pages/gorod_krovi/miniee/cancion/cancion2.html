@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción Secreta 2 (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción Secreta 2 (Gorod Krovi)</strong></h1>
+    <img src="mortero_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Necesitaremos interactuar con 3 cartas de póker. </strong><br><br>
+             Carta 1:<br> En la sala de la izquierda subiendo a Dragon Command, sobre la mesa.<br>
+             <img src="carta1.png" width="600" height="350"class="responsive-image"><br>
+             Carta 2:<br>En Tank Factory, en la sala del Doble-Tap justo en la esquina inferior izquierda de la pizarra.<br>
+             <img src="carta2.png" width="600" height="350"class="responsive-image"><br>
+             Carta 3:<br> Cerca del P-a-P, entre las páginas de un libro. <br>
+             <img src="carta3.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

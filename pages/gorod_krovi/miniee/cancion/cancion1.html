@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción Secreta 1 (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción Secreta 1 (Gorod Krovi)</strong></h1>
+    <img src="mortero_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Necesitaremos interactuar con 3 botellas. </strong><br><br>
+             Botella 1:<br> Primera sala que encontramos en el spawn, encima de un sofá.<br>
+             <img src="botella1.png" width="600" height="350"class="responsive-image"><br>
+             Botella 2:<br>En el paso desde el Jugger-Nog hasta el búnker.<br>
+             <img src="botella2.png" width="600" height="350"class="responsive-image"><br>
+             Botella 3:<br> En Supply Depot al entrar, justo dentro de un estante, de pie al lado de una caja. <br>
+             <img src="botella3.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
