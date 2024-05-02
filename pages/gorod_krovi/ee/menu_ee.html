@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorod Krovi Easter Egg</title>
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
   <div class="container">
     <h1 class="title">Gorod Krovi Easter Egg</h1>
     <div class="options">
       <div class="column">
-        <button class="option-button" id="gorod_ee">Easter Egg</button>
+        <button class="option-button" id="ee/gorod_ee">Easter Egg</button>
       </div>
       <div class="column">
-        <button class="option-button" id="valvulas">Valvulas</button>
+        <button class="option-button" id="valvulas/valvulas">Valvulas</button>
       </div>
       <div class="column">
-        <button class="option-button" id="bombas">Bombas</button>
+        <button class="option-button" id="bombas/bombas">Bombas</button>
       </div>
 
     </div>
@@ -25,11 +25,11 @@
       <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
     </div>
   </div>
-  <script src="../../script.js"></script>
+  <script src="../../../script.js"></script>
   <!-- JavaScript para cargar los iconos -->
   <script>
     // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
+    fetch('../../../icons/icons.html')
       .then(response => response.text())
       .then(data => {
         // Insertar el contenido de icons.html al final del body
@@ -37,7 +37,7 @@
         
         // Agregar eventos de clic a los iconos
         document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
+          window.location.href = '../../../index.html';
         });
 
         document.getElementById('goBack').addEventListener('click', function() {
