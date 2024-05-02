@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorod Krovi</title>
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../../../styles.css">
 <style>    img {
   max-width: 100%;
   height: auto;
@@ -16,33 +16,24 @@
     <h1 class="title">Gorod Krovi</h1>
     <div class="options">
       <div class="column">
-        <button class="option-button" id="escudo/escudo">Escudo </button>
+        <button class="option-button" id="cancion/cancion">Canción Secreta </button>
         <br>
-        <button class="option-button" id="pap/pap">Pack-A-Punch</button>
-        <br>
-        <button class="option-button" id="mortero/mortero">Control de ataque dragón</button>
-
       </div>
       <div class="column">
-
+        <button class="option-button" id="mejoraa/mejoraa">Mejorar Control de Ataque Dragón</button>
         <br>
-        <button class="option-button" id="guantelete/guantelete">Guantelete de Sigfrid</button>
-        <br>
-        <button class="option-button" id="miniee/miniee">Mini Easter Egg </button>
-        <br>
-        <button class="option-button" id="ee/menu_ee">Easter Egg </button>
       </div>
     </div>
     <div class="functions inactive" id="functionsContainer">
       <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
     </div>
-    <img src="mapa.png" width="1280" height="720" class="responsive-image">
+
   </div>
-  <script src="../../script.js"></script>
+  <script src="../../../../script.js"></script>
   <!-- JavaScript para cargar los iconos -->
   <script>
     // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
+    fetch('../../../../icons/icons.html')
       .then(response => response.text())
       .then(data => {
         // Insertar el contenido de icons.html al final del body
@@ -50,7 +41,7 @@
         
         // Agregar eventos de clic a los iconos
         document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
+          window.location.href = '../../../../index.html';
         });
 
         document.getElementById('goBack').addEventListener('click', function() {
