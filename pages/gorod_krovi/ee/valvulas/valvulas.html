@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../../../styles.css">
   <title>Válvulas</title>
   <style>
     body {
@@ -77,7 +77,7 @@
 <body>
   <div class="container">
     <h1 class="title">Válvulas</h1>
-    <img src="mapa.png" alt="Mapa" class="responsive-image" width="720" height="480">
+    <img src="../../mapa.png" alt="Mapa" class="responsive-image" width="720" height="480">
     <form id="nodeForm">
       <h2><label for="startNode">Válvula <span class="green-text">verde</span>:</label>
       <select id="startNode" name="startNode">
@@ -178,11 +178,11 @@
       }
     }
   </script>
-  <script src="../../../../script.js"></script>
+  <script src="../../../../../script.js"></script>
 <!-- JavaScript para cargar los iconos -->
 <script>
   // Cargar el archivo icons.html
-  fetch('../../../../icons/icons.html')
+  fetch('../../../../../icons/icons.html')
     .then(response => response.text())
     .then(data => {
       // Insertar el contenido de icons.html al final del body
@@ -190,7 +190,7 @@
       
       // Agregar eventos de clic a los iconos
       document.getElementById('goToIndex').addEventListener('click', function() {
-        window.location.href = '../../../../index.html';
+        window.location.href = '../../../../../index.html';
       });
 
       document.getElementById('goBack').addEventListener('click', function() {

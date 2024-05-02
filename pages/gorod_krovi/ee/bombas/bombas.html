@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bombas de Gorod Krovi</title>
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../../../../styles.css">
   <style>
     /* Estilos para centrar la imagen horizontalmente */
     .container {
@@ -84,7 +84,7 @@
       <br>
       <button class="reload-button" onclick="reloadPage()"><img src="reload.png" alt="Reload"></button>
     </div>
-  <script src="../../script.js"></script>
+  <script src="../../../../script.js"></script>
   <!-- JavaScript para cargar los iconos -->
   <script>
     let currentNumber = 1; // Inicializamos el número actual en 1
@@ -135,7 +135,7 @@
   </script>
   <script>
     // Cargar el archivo icons.html
-      fetch('../../icons/icons.html')
+      fetch('../../../../../icons/icons.html')
         .then(response => response.text())
         .then(data => {
           // Insertar el contenido de icons.html al final del body
@@ -143,7 +143,7 @@
           
           // Agregar eventos de clic a los iconos
           document.getElementById('goToIndex').addEventListener('click', function() {
-            window.location.href = '../../index.html';
+            window.location.href = '../../../../../index.html';
           });
   
           document.getElementById('goBack').addEventListener('click', function() {
