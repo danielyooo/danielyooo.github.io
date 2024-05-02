@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escudo Dragón (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Escudo Dragón (Gorod Krovi)</strong></h1>
+    <img src="escudo_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Primera parte:</strong> En el camino desde el Jugger-Nog hasta el búnker.<br>
+             <img src="escudo1a.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo1b.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo1c.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte:</strong> En el camino desde búnker hasta Infarmary.<br>
+             <img src="escudo2a.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo2b.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo2c.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Tercera parte:</strong> En el camino desde la parte alta de Armory hasta su parte baja, que es el camino a Supply Depot.<br>
+             <img src="escudo3a.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo3b.png" width="600" height="350"class="responsive-image"><br>
+             <img src="escudo3c.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Fabricar:</strong><br>
+             <img src="escudo_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
