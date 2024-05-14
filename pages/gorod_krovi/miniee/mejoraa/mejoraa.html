@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejorar control de atáque aéreo (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejorar control de atáque aéreo (Gorod Krovi)</strong></h1>
+    <img src="ataque_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> Tener el control de ataque dragón.<br>
+             Con la mejora tendremos 3 ataque disponibles, y el daño aumentará considerablemente. <br>
+             El primer paso será matar a 50 zombies con el ataque dragón. <br>
+             <img src="matar.png" width="600" height="350"class="responsive-image"><br>
+             Después tendremos que buscar una bandera roja fuera del mapa y lanzar un ataque en esa ubicación (cada jugador tendrá una bandera). <br>
+             <strong>Localizaciones: </strong> <br>
+             <img src="1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="3.png" width="600" height="350"class="responsive-image"><br>
+             <img src="4.png" width="600" height="350"class="responsive-image"><br>
+             Luego de acertar el ataque, volveremos al PaP y podremos volver a activar la consola. <br>
+             <img src="activar.png" width="600" height="350"class="responsive-image"><br>
+             Al igual que en la última vez, tendremos 4 rondas, pero esta vez necesitaremos usar el ataque de mortero todo lo que podamos para que se mejore. <br>
+             <img src="usar.png" width="600" height="350"class="responsive-image"><br>
+             Si todo salió bien, podremos recoger el mortero mejorado en el cristal. Si no, volveremos a empezar las rondas. <br>
+             <img src="ataque_final.png" width="600" height="350"class="responsive-image"><br>
+
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,1 +1,65 @@
-objetos vela etc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejorar los Monos (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejorar los Monos (Gorod Krovi)</strong></h1>
+    <img src="mono_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> Tener el escudo y también monos.<br>
+             <strong>Florero:</strong> Buscaremos un florero en las siguientes ubicaciones.
+             <img src="flor1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="flor2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="flor3.png" width="600" height="350"class="responsive-image"><br>
+             <img src="flor4.png" width="600" height="350"class="responsive-image"><br>
+             Después buscaremos la vela y al encontrarla, usaremos el fuego del escudo para prenderla y recogerla. <br>
+             <img src="escudo.png" width="600" height="350"class="responsive-image"><br>
+             Ubicaciones de las velas:<br>
+             <img src="vela1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="vela2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="vela3.png" width="600" height="350"class="responsive-image"><br>
+             <img src="vela4.png" width="600" height="350"class="responsive-image"><br>
+             La última pieza la conseguiremos matando 50 zombies con los monos. <br>
+             <img src="matar.png" width="600" height="350"class="responsive-image"><br>
+             Una vez tengamos las tres piezas, (cada jugador deberá de buscar sus objetos), buscaremos la tumba con la antorcha verde y tiraremos un mono pegado a esta. 
+             Mirando la antorcha podremos reclamar los monos. <br>
+             <img src="mono_final.png" width="600" height="350"class="responsive-image"><br>
+
+
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

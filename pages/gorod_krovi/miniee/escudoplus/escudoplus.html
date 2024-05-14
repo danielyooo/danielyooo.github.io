@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejorar escudo (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejorar escudo (Gorod Krovi)</strong></h1>
+    <img src="escudo_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Cómo obternerlo:</strong> <br>
+             Mataremos unos 40-50 zombies con el escudo (CaC o con el ataque de fuego verde) hasta que escuchemos un sonido de campana. <br>
+             <img src="matar.png" width="600" height="350"class="responsive-image"><br>
+             Después iremos a las tres ubicaciones donde podemos llamar al dragón y con el ataque de fuego verde del escudo dispararemos a unas letras. <br>
+             <strong>Ubicaciones:</strong> <br>
+             <img src="fire1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="fire2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="fire3.png" width="600" height="350"class="responsive-image"><br>
+             Después esperaremos a que el dragón dispare fuego en una zona y ,equipados con el escudo, deberemos permanecer en el fuego hasta que desaparezca. <br>
+             Si lo hacemos bien, volveremos al Spawn e interactuaremos con el dragón muerto. <br>
+             <img src="spawn.png" width="600" height="350"class="responsive-image"><br>
+             Si lo hemos hecho bien, nos cambiará el escudo de Guarda de Fafnir por el escudo Fauces de Tiamat. <br>
+             <img src="escudo_final.png" width="600" height="350"class="responsive-image"><br>
+
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

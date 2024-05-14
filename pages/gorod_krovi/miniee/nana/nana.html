@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samantha's Lullaby (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Samantha's Lullaby (Gorod Krovi)</strong></h1>
+    <img src="nana_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Monos: </strong> Buscaremos los monos en la caja como primer paso.<br><br>
+             Después iremos a la plaza fuera de Dragon Command y esperaremos a que el dragón escupa fuego en la zona. 
+             Inmediatamente tiraremos un mono dentro del fuego (es importante hacerlo rápido, ya que el mono debe explotar antes de que desaparezca el fuego). <br>
+             Debemos repetir esto en Tank Factory y luego en Supply Depot. <br>
+             <img src="mono.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Muñecas: </strong>Iremos al Spawn e interactuamos con la muñeca de la tumba de Samantha.<br><br>
+             <img src="tumba1.png" width="600" height="350"class="responsive-image"><br>
+             En este momento una muñeca aparecerá por el mapa de manera aleatoria y tendremos que encontrarla y dispararle. 
+             Nos podemos guiar por la música que suena desde ella.<br>
+             Alguna localizaciones: <br>
+             <strong>Dentro de Dragon Command, en el techo.</strong>
+             <img src="1.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En Supply Depot, encima de una caja.</strong>
+             <img src="2.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Bajo la escalera más baja de Department Store.</strong>
+             <img src="3.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En la ventana de la izquierda de la lanzadera de dragón en Supply Depot.</strong>
+             <img src="4.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En el vagón que va de Supply Depot a Armory.</strong>
+             <img src="5.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En el Spawn.</strong>
+             <img src="6.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En las afueras de Tank Factory, en el techo de una cloaca.</strong>
+             <img src="7.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Debajo de Infarmary.</strong>
+             <img src="8.png" width="600" height="350"class="responsive-image"><br>
+             <strong>En la plaza de Dragon Command.</strong>
+             <img src="9.png" width="600" height="350"class="responsive-image"><br>
+             Si fallamos se escuchará la risa de Samantha. Solo tendremos que volver a la tumba y repetir el proceso.<br>
+             <strong>Final: </strong>Volvemos al Spawn e interactuamos con la muñeca de la tumba de Samantha. Nos dará un Munición Máxima y empezará a sonar la canción.<br><br>
+             <img src="max.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
