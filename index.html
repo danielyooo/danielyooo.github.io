@@ -5,17 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AYUDA ZOMBER</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .option-button {
+      padding: 0; /* Elimina el padding */
+      background-size: 100% 100%; /* Ajusta el tamaño de la imagen */
+      position: relative; /* Añade posición relativa al botón */
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0px;
+    }
+    .button-text {
+      position: absolute; /* Hace que el texto sea posicionado absolutamente dentro del botón */
+      top: 50%; /* Posiciona el texto en la mitad superior del botón */
+      left: 50%; /* Posiciona el texto en el centro horizontal del botón */
+      transform: translate(-50%, -50%); /* Centra el texto vertical y horizontalmente */
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
+      color: white; /* Color del texto */
+      padding: 5px; /* Espaciado interno del texto */
+      box-sizing: border-box; /* Incluye el padding en el ancho del elemento */
+    }
+    
+  </style>
 </head>
+
 <body>
   <div class="container">
     <h1 class="title">AYUDA ZOMBER</h1>
     <div class="options">
       <div class="column">
         <button class="option-button" id="pages/shadows_of_evil/shadows_of_evil">
-        <img src="pages/soe.png" alt="Shadows of Evil"class="responsive-image">
+        <img src="pages/soe.png"class="responsive-image">
         <span class="button-text">Shadows of Evil</span>
       </button>
-        <button class="option-button" id="pages/the_giant/the_giant">The Giant</button>
+        <button class="option-button" id="pages/the_giant/the_giant">
+          <img src="pages/giant.png" class="responsive-image">
+        <span class="button-text">The Giant</span>
+      </button>
         <button class="option-button" id="pages/der_eisendrachen/der_eisendrachen">Der Eisendrachen</button>
         <button class="option-button" id="pages/zetzubou_no_shima/zetzubou_no_shima">Zetzubou No Shima</button>
         <button class="option-button" id="pages/gorod_krovi/gorod_krovi">Gorod Krovi</button>
