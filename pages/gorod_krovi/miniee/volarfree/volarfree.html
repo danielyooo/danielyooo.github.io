@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alas de Dragón (Gorod Krovi)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Alas de Dragón (Gorod Krovi)</strong></h1>
+    <img src="ala_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p>
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> Tener el guantelete de Siegfried.<br>
+             Con las alas, aparte de tener resistencia al fuego, podremos viajar al PaP sin costo y sin la cinemática del dragón. 
+             Solo tendremos que teletransportarnos en esto aparatos con alas. <br>
+             <img src="donde.png" width="600" height="350"class="responsive-image"><br>
+             Tendremos que volar al PaP desde cada una de las plataformas donde se puede llamar al dragón. <br>
+             Después iremos a la última planta del Department Store para obtener las alas. <br>
+             <img src="ala_final.png" width="600" height="350"class="responsive-image"><br>
+
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
