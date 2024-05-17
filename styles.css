@@ -174,7 +174,7 @@ hr { /*Líne horizontal*/
 .slider {
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  max-width: 100%;
 
   text-align: center;
   display: flex;
@@ -183,7 +183,7 @@ hr { /*Líne horizontal*/
 }
 
 .slide {
-  width: 100%;
+  max-width: 100%;
   display: none;
 }
 
