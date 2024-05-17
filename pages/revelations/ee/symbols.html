@@ -48,12 +48,37 @@
       display: none; /* Escondido por defecto */
     }
 
-    .reload-button {
-      display: block;
-      margin: 20px auto;
-      width: 90px;
-      height: 90px;
-      cursor: pointer;
+ 
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+      }
+
+      .symbol-container {
+        margin: 5px;
+      }
+
+      .symbol {
+        border: 1px solid transparent;
+      }
+
+      .number-label {
+        font-size: 16px;
+        padding: 3px 7px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+      }
+
+      .reload-button {
+        width: 70px;
+        height: 70px;
+      }
     }
   </style>
 </head>
@@ -113,10 +138,7 @@
         });
       });
 
-      const reloadButton = document.querySelector('.reload-button');
-      reloadButton.addEventListener('click', function() {
-        location.reload();
-      });
+      
     });
   </script>
 
