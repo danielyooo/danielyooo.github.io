@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Símbolos (Revelations)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+  <style>
+    /* Estilos generales */
+    
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 114px);
+      grid-gap: 10px;
+      justify-content: center;
+    }
+
+    .symbol-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .symbol {
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      object-fit: cover;
+    }
+
+    .number-label {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 25%;
+      font-size: 20px;
+      display: none; /* Escondido por defecto */
+    }
+
+    .reload-button {
+      display: block;
+      margin: 20px auto;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Símbolos (Revelations)</h1>
+    <div class="grid">
+      <div class="symbol-container">
+        <img src="symbol1.png" alt="Symbol 1" class="symbol" data-selected="false">
+        <span class="number-label"></span>
+      </div>
+      <div class="symbol-container">
+        <img src="symbol2.png" alt="Symbol 2" class="symbol" data-selected="false">
+        <span class="number-label"></span>
+      </div>
+      <div class="symbol-container">
+        <img src="symbol3.png" alt="Symbol 3" class="symbol" data-selected="false">
+        <span class="number-label"></span>
+      </div>
+      <div class="symbol-container">
+        <img src="symbol4.png" alt="Symbol 4" class="symbol" data-selected="false">
+        <span class="number-label"></span>
+      </div>
+      <!-- Agrega más imágenes según sea necesario -->
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const symbols = document.querySelectorAll('.symbol');
+      let selectedCount = 0;
+
+      symbols.forEach(function(symbol) {
+        symbol.addEventListener('click', function() {
+          const label = symbol.nextElementSibling;
+          if (symbol.getAttribute('data-selected') === 'false') {
+            if (selectedCount < 4) {
+              selectedCount++;
+              symbol.style.border = '3px solid rgb(235, 87, 2)';
+              symbol.setAttribute('data-selected', 'true');
+              label.textContent = selectedCount;
+              label.style.display = 'inline';
+            }
+          } else {
+            symbol.style.border = '2px solid transparent';
+            symbol.setAttribute('data-selected', 'false');
+            label.style.display = 'none';
+            selectedCount--;
+            // Reajustar los números si se deselecciona una imagen
+            symbols.forEach((sym, idx) => {
+              const lbl = sym.nextElementSibling;
+              if (sym.getAttribute('data-selected') === 'true') {
+                lbl.textContent = idx + 1;
+              }
+            });
+          }
+        });
+      });
+
+      const reloadButton = document.querySelector('.reload-button');
+      reloadButton.addEventListener('click', function() {
+        location.reload();
+      });
+    });
+  </script>
+
+  <script>
+    // Cargar el archivo icons.html
+    fetch('../../../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+</body>
+</html>

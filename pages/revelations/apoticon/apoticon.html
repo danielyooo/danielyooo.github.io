@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conseguir y mejorar el Apothicon (Revelations)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Conseguir y mejorar el Apothicon (Revelations)</strong></h1>
+    <img src="apoticon_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Primera parte:</strong> La manera de conseguir el Apothicon será a través de la caja misteriosa.<br>
+             <img src="caja.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte:</strong> Para mejorarlo tendremos que absorber 5 piedras azules que están en el cielo.<br>
+             <strong>The House</strong><br>
+             <img src="azul1.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Der Eisendrachen</strong><br>
+             <img src="azul2.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Verrückt</strong><br>
+             <img src="azul3.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Mob of the Dead</strong><br>
+             <img src="azul4.png" width="600" height="350"class="responsive-image"><br>
+             <strong>La lanzadera de Verrückt que va a Mob of the Dead</strong><br>
+             <img src="azul5.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Tercera parte:</strong> Una vez hecho esto, podremos ir al PaP y mejorar el Apothicon.<br>
+             <img src="apoticon_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
