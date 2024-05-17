@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack-A-Punch (Revelations)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Pack-A-Punch (Revelations)</strong></h1>
+    <img src="pap_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Primera parte:</strong> Tendremos que realizar los 4 rituales que se encuentran en The House, Der Eisendrachen, Verrückt y Mob of the Dead.<br>
+             <img src="1.png" width="600" height="350"class="responsive-image"><br>
+             <img src="2.png" width="600" height="350"class="responsive-image"><br>
+             <img src="3.png" width="600" height="350"class="responsive-image"><br>
+             <img src="4.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte:</strong> Iremos a Nacht por alguno de los portales que se abren al completar el ritual y esperaremos a que el Apothicon pase para accionar la trampa.<br>
+             <img src="atrapar.png" width="600" height="350"class="responsive-image"><br>
+             Luego entraremos por su boca.<br>
+             <img src="entrar.png" width="600" height="350"class="responsive-image"><br>
+             Al llegar. romperemos las bolsas amarillas del techo.<br>
+             <img src="romper.png" width="600" height="350"class="responsive-image"><br>
+             El PaP caerá de inmediato.<br>
+             <img src="pap_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

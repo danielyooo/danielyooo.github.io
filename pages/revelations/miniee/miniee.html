@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini EE de (Revelations)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Mini EE de (Revelations)</h1>
+    <div class="options">
+      <div class="column">
+        <button class="option-button" id="armas/armas">Armas secretas</button>
+        <br>
+        <button class="option-button" id="mesa/mesa">Cambiar armas con jugadores </button>
+        <br>
+        <button class="option-button" id="cancion1/cancion1">Cancion 1 </button>
+        <br>
+        <button class="option-button" id="cancion1/cancion1">Cancion 2 </button>
+        <br>
+        <button class="option-button" id="perk/perk">Perks gratis</button>
+        <br>
+        <button class="option-button" id="lobo/lobo">Máscara de Lobo </button>
+      </div>
+      <div class="column">
+        <button class="option-button" id="keeper/keeper">Máscara del Keeper </button>
+        <br>
+        <button class="option-button" id="furia/furia">Máscara de Furia </button>
+        <br>
+        <button class="option-button" id="margwa/margwa">Máscara de Margwa </button>
+        <br>
+        <button class="option-button" id="shadowman/shadowman">Máscara de Shadowman </button>
+        <br>
+        <button class="option-button" id="caballero/caballero">Casco de Templario </button>
+        <br>
+        <button class="option-button" id="vikingo/vikingo">Casco de Vikingo </button>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="functions inactive" id="functionsContainer">
+      <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
+    </div>
+  </div>
+
+  <script src="../../../script.js"></script>
+  <!-- JavaScript para cargar los iconos -->
+  <script>
+    // Cargar el archivo icons.html
+    fetch('../../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>

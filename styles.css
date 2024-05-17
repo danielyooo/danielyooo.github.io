@@ -170,3 +170,61 @@ hr { /*Líne horizontal*/
 .function-button:hover {
   background-color: #000000; /* Gris claro */
 }
+
+.slider {
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+button.prev, button.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border: none;
+  background-color: rgba(0,0,0,0.5);
+  user-select: none;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgb(0, 0, 0); /* Fondo semitransparente */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+}
