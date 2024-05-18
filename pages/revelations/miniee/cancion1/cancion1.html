@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 1 (Revelations)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 1 (Revelations)</strong></h1>
+    <img src="foto.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+             <div class="title-with-image">
+             Tendremos que accionar los tres osos repartidos por el mapa para que empiece a sonar la canción.
+             <br>
+             <strong>Primera parte:</strong> En Mob of the Dead justo en la entrada a Buried.<br>
+             <img src="oso1.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Segunda parte:</strong> En Verrückt, en la planta de arriba.<br>
+             <img src="oso2.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Tercera parte:</strong> En Kino der Toten sentado en una silla.<br>
+             <img src="oso3.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
