@@ -187,11 +187,7 @@ hr { /*Líne horizontal*/
   max-width: 100%;
   display: none;
 }
-.slider img {
-  width: 600px; /* Establece el ancho de la imagen */
-  height: 350px; /* Establece la altura de la imagen */
-  object-fit: cover; /* Esto ajusta la imagen para cubrir el contenedor manteniendo su proporción */
-}
+
 .slide.active {
   display: block;
 }
@@ -236,3 +232,10 @@ button.prev:hover, button.next:hover {
 }
 
 
+@media only screen and (max-width: 768px) {
+  .slider img {
+    width: 600px; /* Establece el ancho de la imagen */
+    height: 350px; /* Establece la altura de la imagen */
+    object-fit: cover; /* Esto ajusta la imagen para cubrir el contenedor manteniendo su proporción */
+  }
+}
