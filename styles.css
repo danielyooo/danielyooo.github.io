@@ -248,4 +248,15 @@ button.prev:hover, button.next:hover {
     height: 350px; /* Establece la altura de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin deformarse */
   }
+  .slide {
+    width: 600px; /* Establece el ancho del contenedor */
+    height: 350px; /* Establece la altura del contenedor */
+    overflow: hidden; /* Asegura que el contenido que excede el contenedor se oculte */
+  }
+
+  .slide img {
+    width: 600px; /* Establece el ancho de la imagen */
+    height: 350px; /* Establece la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin deformarse */
+  }
 }
