@@ -238,23 +238,27 @@ button.prev:hover, button.next:hover {
 
 @media only screen and (max-width: 768px) {
   .slider {
+    max-width: 100%;
     width: 600px; /* Establece el ancho del contenedor */
     height: 350px; /* Establece la altura del contenedor */
     overflow: hidden; /* Asegura que el contenido que excede el contenedor se oculte */
   }
 
   .slider img {
+    max-width: 100%;
     width: 600px; /* Establece el ancho de la imagen */
     height: 350px; /* Establece la altura de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin deformarse */
   }
   .slide {
+    max-width: 100%;
     width: 600px; /* Establece el ancho del contenedor */
     height: 350px; /* Establece la altura del contenedor */
     overflow: hidden; /* Asegura que el contenido que excede el contenedor se oculte */
   }
 
   .slide img {
+    max-width: 100%;
     width: 600px; /* Establece el ancho de la imagen */
     height: 350px; /* Establece la altura de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin deformarse */
