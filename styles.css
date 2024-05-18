@@ -138,6 +138,8 @@ hr { /*Líne horizontal*/
 /* Estilos de las imágenes */
 .responsive-image {
   max-width: 100%;
+  
+
   height: auto;
   display: block;
   margin: 0 auto;
@@ -228,4 +230,16 @@ button.prev:hover, button.next:hover {
   padding: 5px 10px;
   border-radius: 3px;
   font-size: 16px;
+}
+@media only screen and (max-width: 600px) {
+  .slider {
+    padding: 1px;
+    width: 23%; /* Ancho relativo de las imágenes */
+    max-width: 100px; /* Ancho máximo de cada imagen */
+    max-height: 720px;
+    margin: 0px; /* Espacio entre las imágenes */
+    cursor: pointer; /* Cambiar cursor a puntero para indicar que se puede hacer clic */
+    position: relative; /* Posición relativa para alinear los números */
+  }
+
 }
