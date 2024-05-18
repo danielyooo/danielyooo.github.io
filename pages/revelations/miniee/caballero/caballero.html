@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casco de Caballero Templario (Revelations)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Casco de Caballero Templario (Revelations)</strong></h1>
+    <img src="caballero_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+             <div class="title-with-image">
+             El casco de Caballero Templario nos dará lo siguiente: 
+             <br>
+             El jugador inflige 33% más de daño a los jefes.
+             <br>
+             Los efectos elementales de las muertes de zombies no causan daño.
+             <br>
+             50% de reducción de daño de todos los jefes.
+             <br>
+             Aumento en la duración de sprint.
+             <br>
+             <br>
+             <br>
+             Lo primero será tener la máscara de lobos, es obligatorio. 
+             <br>
+             Tendremos que quitarle el casco a un Panzer y eliminar su núcleo, se puede hacer al mismo o a dos diferentes.
+             <br>
+             <img src="panzer.png"  width="600" height="350" class="responsive-image">
+             <br>
+             Después tendremos que matar a 30 zombies con trampas.
+             <br>
+             <img src="trampa30.png"  width="600" height="350" class="responsive-image">
+             Cuando lo hagamos, iremos a Kino der Toten y podremos reclamar el casco.
+             <br>
+             <br>
+             <img src="caballero_final.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

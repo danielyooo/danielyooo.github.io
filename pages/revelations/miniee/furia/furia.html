@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de Furias (Revelations)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Máscara de Furias (Revelations)</strong></h1>
+    <img src="furia_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+             <div class="title-with-image">
+             La máscara de Furias nos dará lo siguiente: 
+             <br>
+             +1 impacto de zombies.
+             <br>
+             33% de reducción de daño CaC de los furias.
+             <br>
+             El jugador inflige 50% más de daño a las furias.
+             <br>
+             Lo primero será tener la máscara de lobos, es obligatorio. Lo único que tenemos que hacer es matar a alrededor de 15 furias de tiro a la cabeza, escucharemos un sonido de confirmación.
+             <br>
+             <img src="furia.png" width="600" height="350"class="responsive-image"><br>
+             Cuando lo hagamos, iremos a Kino der Toten y podremos reclamar la máscara.
+             <br>
+             <img src="furia_final.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

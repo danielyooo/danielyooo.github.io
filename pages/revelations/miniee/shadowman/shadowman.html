@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de Shadowman (Revelations)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Máscara de Shadowman (Revelations)</strong></h1>
+    <img src="shadow_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+             <div class="title-with-image">
+             La máscara de Shadowman, la mejor de todas, nos dará lo siguiente: 
+             <br>
+             +1 impacto de todos los enemigos.
+             <br>
+             33% de reducción de daño de todos los enemigos.
+             <br>
+             Aumento en la duración de sprint.
+             <br>
+             Lo primero será tener la máscara de lobos y el escudo, es obligatorio. 
+             <br>
+             Tendremos que matar a esta lista de enemigos en el interior del Apoticón cuando este haga la digestión (TOXIC).
+             <br>
+             Cada vez que completemos un apartado de la lista, oiremos un sonido de confirmación.
+             <br>
+             <img src="nube.png"  width="600" height="350" class="responsive-image">
+             <br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                <div class="slide active">
+                <img src="zombie.png"  width="600" height="350" class="responsive-image">
+                <div class="caption">50 zombies</div>
+                </div>
+                <div class="slide">
+                <img src="araña.png"  width="600" height="350" class="responsive-image">   
+                <div class="caption">5 arañas</div>
+                </div>
+                <div class="slide">
+                <img src="mosca.png"  width="600" height="350" class="responsive-image">   
+                <div class="caption">5 parásitos</div>
+                </div>
+                <div class="slide">
+                <img src="furia.png"  width="600" height="350" class="responsive-image">   
+                <div class="caption">10 furias</div>
+                </div>
+                <div class="slide">
+                <img src="keeper.png"  width="600" height="350" class="responsive-image">   
+                <div class="caption">5 keepers</div>
+                </div>
+                <div class="slide">
+                <img src="margwa.png"  width="600" height="350" class="responsive-image">   
+                <div class="caption">2 Margwas elementales diferentes (de un tiro en cada cabeza)</div>
+                </div>
+
+
+                <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+             </div>
+             <br>
+             Cuando lo hagamos, iremos a Kino der Toten y podremos reclamar la máscara.
+             <br>
+             <br>
+             <img src="shadow_final.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara del Keeper (Revelations)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Máscara del Keeper (Revelations)</strong></h1>
+    <img src="keeper_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+             <div class="title-with-image">
+             La máscara deL Keeper nos dará lo siguiente: 
+             <br>
+             +1 impacto de zombies.
+             <br>
+             50% de reducción de daño de guardianes esclavizados.
+             <br>
+             El jugador inflige 33% más de daño a los guardianes esclavizados.
+             <br>
+             El protector guardián dura 30 segundos más.
+             <br>
+             Lo primero será tener la máscara de lobos, es obligatorio. Lo único que tenemos que hacer es llamar a un guardián y que mate a 20 zombies, escucharemos un sonido de confirmación.
+             <br>
+             <img src="keeper20.png" width="600" height="350"class="responsive-image"><br>
+             Cuando lo hagamos, iremos a Kino der Toten y podremos reclamar la máscara.
+             <br>
+             <img src="keeper_final.png" width="600" height="350"class="responsive-image"><br>
+
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
