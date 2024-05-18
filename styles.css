@@ -236,7 +236,7 @@ button.prev:hover, button.next:hover {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 100%) {
   .slider {
     max-width: 100%;
     width: 600px; /* Establece el ancho del contenedor */
