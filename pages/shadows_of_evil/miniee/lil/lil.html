@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejorar Lil'Arnies (Shadows of Evil)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejorar Lil'Arnies (Shadows of Evil)</strong></h1>
+    <img src="lil_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      Para mejorar los Lil'Arnies, lo primero será conseguirlos en la caja. 
+      <br>
+      <img src="caja.png" width="600" height="350"class="responsive-image"><br>
+      <strong>Matar:</strong> Deberemos de matar a 100 zombies con los Lil'Arnies.<br>
+      <img src="matar100.png" width="600" height="350"class="responsive-image"><br>
+      Si matamos los 100 zombies, iremos en busca de tres objetos a los que tendremos que tirarles un Lil'Arnie a cada uno. Los objetos tienen que desaparecer si lo hacemos correctamente.<br><br>
+      <strong>Primera parte:</strong><br> En el ritual de Canals, planta baja, el bastón apoyado en el sofá verde.(Lanzar Lil'Arnie)<br>
+      <img src="baston.png" width="600" height="350"class="responsive-image"><br>
+      <strong>Segunda parte:</strong><br> En el ritual del Spawn, a un sombrero encima de un maniquí.(Lanzar Lil'Arnie)<br>
+      <img src="sombrero.png" width="600" height="350"class="responsive-image">
+      <strong>Tercera parte:</strong><br> En el ritual de Waterfront, a la pajarita de la estantería.(Lanzar Lil'Arnie)<br>
+      <img src="pajarita.png" width="600" height="350"class="responsive-image"><br>
+      Iremos al ritual de Footlight y veremos al pulpo con los tres objetos. Al lanzar otro Lil'Arnie a la mesa, una animación graciosa ocurrirá.<br>
+      <img src="last.png" width="600" height="350"class="responsive-image"><br>
+      Y con esto tendremos la mejora completada.<br>
+      <br>
+      <img src="lil_final.png" width="600" height="350"class="responsive-image">
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
