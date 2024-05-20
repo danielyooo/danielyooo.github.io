@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicle gratis (Shadows of Evil)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Chicle Gratis (Shadows of Evil)</strong></h1>
+    <img src="chicle_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+        <strong>Requisitos:</strong>Pap desbloqueado y Widows Wine con las 4 semtex. <br>
+      Después iremos a Canals, y subiremos por la zona donde se encuentra una pieza del escudo, justo en estos 4 leones. <br>
+      <img src="leon.png" width="600" height="350"class="responsive-image"><br>
+      Tendremos que meter una semtex en cada una de las 4 bocas de los leones.<br>
+      <img src="semtex.png" width="600" height="350"class="responsive-image"><br>
+      Si lo hacemos bien, de una de las bocas saldrá una bolita.<br>
+      <img src="bola.png" width="600" height="350"class="responsive-image"><br>
+      Después iremos cerca de la entrada de Footlight, y en esta ventana veremos un plato con el que tendremos que interactuar para dejar la bola. <br>
+      <img src="plato.png" width="600" height="350"class="responsive-image"><br>
+      Pasaremos 2 rondas y podremos recoger el chicle del plato, ya que este habrá crecido. <br>
+      <img src="chicle_final.png" width="600" height="350"class="responsive-image"><br>
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>500 puntos (Shadows of Evil)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>500 puntos (Shadows of Evil)</strong></h1>
+    <img src="points_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      Con este truco conseguiremos 500 puntos según empecemos nuestra partida. <br>
+      Con una granada, calcularemos el tiempo exacto para que explote en ese abrigo. Con Semtex es mucho más fácil si tenemos Widows Wine. <br>
+      <img src="granada.png" width="600" height="350"class="responsive-image"><br>
+      Si lo hemos hecho bien, aparecerá esta nota que al recogerla, nos dará los 500 puntos.<br>
+      <img src="papel.png" width="600" height="350"class="responsive-image">
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

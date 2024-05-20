@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shadows of Evil</title>
-  <link rel="stylesheet" href="../../styles.css">
+  <title>Mini EE de (Shadows of Evil)</title>
+  <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Shadows of Evil</h1>
+    <h1 class="title">Mini EE de (Revelations)</h1>
     <div class="options">
       <div class="column">
-        <button class="option-button" id="escudo">Escudo Cohete</button>
-        <button class="option-button" id="packapunch">Pack-A-Punch</button>
-        <button class="option-button" id="Protector">Protector Civil</button>
-        <button class="option-button" id="arma">Siervo de Apoticón</button>
-      </div>
-      <div class="column">
-        <button class="option-button" id="espada">Espada</button>
-        <button class="option-button" id="mejora">Mejorar Espada</button>        
-        <button class="option-button" id="miniee/mini_ee">Mini Easter Eggs</button>
-        <button class="option-button" id="shadows_menu">Easter Egg</button>
-
+        <button class="option-button" id="cancion1/cancion1">Cancion 1</button>
+        <br>
+        <button class="option-button" id="cancion2/cancion2">Cancion 2</button>
+        <br>
+        <button class="option-button" id="escudo/escudo">Mejorar Escudo</button>
+        <br>
+        <button class="option-button" id="lil/lil">Mejorar Lil'Arnies </button>
         <br>
       </div>
-    
+      <div class="column">
+        <button class="option-button" id="margwa/margwa">Máscara de Margwa </button>
+        <br>
+        <button class="option-button" id="points/points">500 puntos gratis </button>
+        <br>
+        <button class="option-button" id="chicle/chicle">Chicle Gratis </button>
+        <br>
+        <button class="option-button" id="donut/donut">Trampa de Donuts </button>
+        <br>
+      </div>
     </div>
-    <br><img src="map.png" width="1280" height="720" class="responsive-image">        <br>
+
     <div class="functions inactive" id="functionsContainer">
       <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
     </div>
   </div>
-  <script src="../../script.js"></script>
+
+  <script src="../../../script.js"></script>
   <!-- JavaScript para cargar los iconos -->
   <script>
     // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
+    fetch('../../../icons/icons.html')
       .then(response => response.text())
       .then(data => {
         // Insertar el contenido de icons.html al final del body
@@ -43,7 +49,7 @@
         
         // Agregar eventos de clic a los iconos
         document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
+          window.location.href = '../../../index.html';
         });
 
         document.getElementById('goBack').addEventListener('click', function() {

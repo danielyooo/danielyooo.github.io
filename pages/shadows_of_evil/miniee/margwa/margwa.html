@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de Margwa (Shadows of Evil)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Máscara de Margwa (Shadows of Evil)</strong></h1>
+    <img src="margwa_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      La máscara del Margwa hará que los golpes del Margwa nos hagan tanto daño como un golpe de zombie. <br>
+      <br>
+      <strong>Matar:</strong> Deberemos de matar a 6 Margwas y tener desbloqueado el PaP para comenzar.<br>
+      <img src="margwa6.png" width="600" height="350"class="responsive-image"><br>
+      Hecho esto, tendremos que dispararle a los 6 corazones de Margwa mientras montamos en el tren. (Disparando por los cristales rotos) <br>
+      La mejor ruta es ir de Waterfront a Footlight y de Footlight a Canals. Tendremos que romper los 6 corazones en solo dos viajes de tren o se reiniciarán. <br>
+      <img src="water.png" width="600" height="350"class="responsive-image"><br>
+      La mejor arma para disparar a los corazones es la Raygun. <br>
+      <strong></strong>Localizaciones:</strong>
+      <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="1.png" width="600" height="350" class="slide-image">
+                <div class="caption">Waterfront</div>
+            </div>
+            <div class="slide">
+                <img src="2.png" width="600" height="350" class="slide-image">
+                <div class="caption">Waterfront</div>
+            </div>
+            <div class="slide">
+                <img src="3.png" width="600" height="350" class="slide-image">
+                <div class="caption">Centro (Junction)</div>
+            </div> 
+            <div class="slide">
+                <img src="4.png" width="600" height="350" class="slide-image">
+                <div class="caption">Footlight</div>
+            </div> 
+            <div class="slide">
+                <img src="5.png" width="600" height="350" class="slide-image">
+                <div class="caption">Footlight(Disparar por el cristal roto de la parte de atrás del tren)</div>
+            </div> 
+            <div class="slide">
+                <img src="6.png" width="600" height="350" class="slide-image">
+                <div class="caption">Canals</div>
+            </div>
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        
+      </div>
+        <br>
+        Si lo hicimos correctamente se escuchará un sonido de Margwa. Y es el momento de buscar nuestra máscara (una luz brillará en el lugar de manera intermitente) que puede aparecer en 4 ubicaciones:<br>
+        <br>
+        <div id="slider2" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider2')">&#10094;</button>
+        <div class="slide active">
+        <img src="spot1.png" width="600" height="350" class="slide-image">
+        <div class="caption">Waterfront, en el ritual.</div>
+        </div>
+        <div class="slide">
+        <img src="spot2.png" width="600" height="350" class="slide-image">
+        <div class="caption">Spawn, en el ritual.</div>
+        </div>
+        <div class="slide">
+        <img src="spot3.png" width="600" height="350" class="slide-image">
+        <div class="caption">Canals, en la parte más alta del ritual, por uno de los balcones.</div>
+        </div> 
+        <div class="slide">
+        <img src="spot4.png" width="600" height="350" class="slide-image">
+        <div class="caption">Footlight, en el ritual</div>
+        </div> 
+        <button class="next" onclick="changeSlide(1, 'slider2')">&#10095;</button>
+        </div>
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
