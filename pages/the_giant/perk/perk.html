@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desbloquear Perk (The Giant)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Desbloquear Perk (The Giant)</strong></h1>
+    <img src="perk_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      <strong>Requisito:</strong><br>Tener el PaP activado y tener los monos de la caja.<br>
+      <img src="caja.png" width="720" height="480"class="responsive-image"><br>
+      Tendremos que ir a cada uno de los teleporters y lanzar un mono. <br>
+      <img src="lanzar.png" width="720" height="480"class="responsive-image"><br>
+      Después tendremos que teletransportarnos con él, antes de que explote. <br>
+      <img src="tp.png" width="720" height="480"class="responsive-image"><br>
+      Hecho esto un botón rojo se encenderá, encima de las tres luces verdes en el panel al lado del PaP. <br>
+      <img src="boton.png" width="720" height="480"class="responsive-image"><br>
+      Al interactuar con él, un rayo del gigante se reflejará en varios lugares y derritirá la nieve que escondía al perk. <br>
+      <img src="perk_final.png" width="720" height="480"class="responsive-image"><br>
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
