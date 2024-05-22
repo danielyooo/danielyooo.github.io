@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 3 (Moon)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 3 y Max Ammo (Moon)</strong></h1>
+    <img src="foto.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      Para reproducir la canción deberemos de interactuar con las cuatro consolas de la sala frente a electricidad. <br>
+      Las enumeramos del 1 al 4 para facilitar la secuencia. <br>
+      La consola 1 y 2 estarán mirando a la entrada del Túnel 6. <br>
+      La consola 3 y 4 estarán mirando a la entrada del Túnel 11. <br>
+      Tendremos que interactuar con ellas en el sigueinte orden: <br>
+      <img src="consola.png" width="600" height="350"class="responsive-image"><br><br>
+      Tras un sonido de confirmación, iremos a la izquierda de la pirámide para interactuar con la muñeca de Samantha. <br>
+      <img src="doll.png" width="600" height="350"class="responsive-image"><br><br>
+      Aparecerán 7 muñecas frente a la pirámide y tendremos que dispararle de derecha a izquierda a cada una, siguiendo este orden: <br><br>
+      <img src="disparo.png" width="600" height="350"class="responsive-image"><br><br>
+      Hecho esto, interactuamos con la muñeca otra vez, la canción sonará y un Máxima Munición aparecerá. <br>
+      <img src="max.png" width="600" height="350"class="responsive-image"><br><br>
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
