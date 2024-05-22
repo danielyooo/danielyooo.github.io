@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 1 (Moon)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 1 (Moon)</strong></h1>
+    <img src="foto.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      Para reproducir la canción deberemos de interactuar con tres osos. <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="oso1.png" width="600" height="350" class="slide-image">
+                <div class="caption">Debajo del Spawn.</div>
+            </div>
+            <div class="slide">
+                <img src="oso2.png" width="600" height="350" class="slide-image">
+                <div class="caption">Camino a electricidad por túnel 6, el módulo de aire.</div>
+            </div>
+            <div class="slide">
+                <img src="oso3.png" width="600" height="350" class="slide-image">
+                <div class="caption">Frente al perk en el túnel 11.</div>
+            </div> 
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        
+      </div>
+
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
