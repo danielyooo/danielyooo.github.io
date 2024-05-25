@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 2 (Shangri-La)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 2 y Max Ammo (Shangri-La)</strong></h1>
+    <img src="cancion_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+      Para reproducir la canción deberemos de interactuar con los 4 gongs correctos. (De los 8 del mapa solo 4 sonarán bien). <br>
+      <img src="dong.png" width="600" height="350"class="responsive-image"><br><br>
+      Después bajaremos por el tunel en la zona de la vagoneta y dispararemos a estos sartenes con la pistola del principio. <br>
+      2 disparos al primero y 1 al último. <br>
+      <img src="pistol21.png" width="600" height="350"class="responsive-image"><br><br>
+      Al escuchar el sonido de confirmación, subiremos a la zona de la vagoneta e interactuaremos con la muñeca de Samantha. <br>
+      <img src="doll1.png" width="600" height="350"class="responsive-image"><br><br>
+      Después tendremos que disparar a las 5 muñecas en el siguiente orden: <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="1.png" width="600" height="350" class="slide-image">
+                <div class="caption">1. Por la entrada a la vagoneta.</div>
+            </div>
+            <div class="slide">
+                <img src="2.png" width="600" height="350" class="slide-image">
+                <div class="caption">2. En la sala de electricidad, bajo un farol.</div>
+            </div>
+            <div class="slide">
+                <img src="3.png" width="600" height="350" class="slide-image">
+                <div class="caption">3. A la derecha de este último, en el techo.</div>
+            </div> 
+            <div class="slide">
+              <img src="4.png" width="600" height="350" class="slide-image">
+              <div class="caption">4. Al salir por la cascada, justo encima de la entrada.</div>
+          </div> 
+          <div class="slide">
+            <img src="5.png" width="600" height="350" class="slide-image">
+            <div class="caption">5. Encima de la piedra de cascada.</div>
+        </div> 
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        
+      </div>
+      Hecho esto volveremos a interactuar con Samantha y tanto la munición máxima como la canción aparecerán. <br>
+      <img src="cancion_final.png" width="600" height="350"class="responsive-image"><br><br>
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

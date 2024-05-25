@@ -78,7 +78,11 @@
 
       const reloadButton = document.querySelector('.reload-button');
       reloadButton.addEventListener('click', function() {
-        location.reload();
+        symbols.forEach(function(symbol) {
+          symbol.style.border = '2px solid transparent';
+          symbol.setAttribute('data-selected', 'false');
+        });
+        selectedCount = 0;
       });
     });
   </script>
