@@ -292,24 +292,40 @@ button.prev:hover, button.next:hover {
     audio {
       width: 100%;
       max-width: 600px;
-      
-      
+      font-weight: lighter;
+      text-shadow: none;
       border-radius: 10px; /* Bordes redondeados */
       overflow: hidden;
     }
+
     /* Estilos para navegadores basados en WebKit (Chrome, Safari) */
     audio::-webkit-media-controls-panel {
       background-color: #c74204; /* Fondo de los controles */
     }
-    audio::-webkit-media-controls-play-button,
-    audio::-webkit-media-controls-pause-button,
-    audio::-webkit-media-controls-mute-button,
-    audio::-webkit-media-controls-volume-slider,
-    audio::-webkit-media-controls-current-time-display,
-    audio::-webkit-media-controls-time-remaining-display,
-    audio::-webkit-media-controls-timeline {
-      color: #000000; /* Color de los botones y textos */
-      
+    audio::-webkit-media-controls-play-button{/* Botón de play */
+      color: #000000; 
+    }
+    audio::-webkit-media-controls-pause-button{/* Botón de pausar */
+      color: #000000; 
+    }
+    audio::-webkit-media-controls-mute-button{/* Botón de mutear */
+      color: #000000; 
+    }
+    audio::-webkit-media-controls-volume-slider{/* Barra del volumen */
+      color: #000000; 
+    }
+    audio::-webkit-media-controls-current-time-display{/* Tiempo actual */
+      color: #000000; 
+      text-shadow: none;
+      font-weight: bold;
+    }
+    audio::-webkit-media-controls-time-remaining-display{/* Tiempo total */
+      color: #000000; 
+      text-shadow: none;
+
+    }
+    audio::-webkit-media-controls-timeline { /* Fondo de la barra de progreso */
+      color: #000000; 
     }
     /* Estilos adicionales */
     audio::-webkit-media-controls-timeline {
@@ -318,3 +334,10 @@ button.prev:hover, button.next:hover {
     audio::-webkit-media-controls-volume-slider {
       background-color: #c74204; /* Fondo del control de volumen */
     }
+    audio::-moz-volume-slider {
+      background-color: #000000;
+    }
+    audio::-moz-volume-slider-container {
+      background-color: #000000;
+    }
+   
