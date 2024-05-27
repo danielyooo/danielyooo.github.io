@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Easter Eggs (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Mini Easter Eggs (Origins)</h1>
+    <div class="options">
+      <div class="column">
+        <button class="option-button" id="cancion1/cancion1">Cancion 1 </button>
+        <br>
+        <button class="option-button" id="cancion2/cancion2">Cancion 2</button>
+        <br>
+        <button class="option-button" id="cancion3/cancion3">Cancion 3</button>
+        <br>
+        <button class="option-button" id="cancion4/cancion4">Cancion 4</button>
+        <br>
+        <button class="option-button" id="freegun/freegun">Arma mejorada gratis</button>
+        <br>
+
+      </div>
+      <div class="column">
+        <button class="option-button" id="pala_casco/pala_casco">Pala y Casco de oro</button>
+        <br>
+        <button class="option-button" id="perk/perk">Perk gratis</button>
+        <br>
+        <button class="option-button" id="sangrefree/sangrefree">Sangre Zombie </button>
+        <br>
+        <button class="option-button" id="scare/scare">Jump Scare </button>
+        <br>
+
+      </div>
+    </div>
+   
+    <div class="functions inactive" id="functionsContainer">
+      <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
+    </div>
+  </div>
+
+  <script src="../../../../script.js"></script>
+  <!-- JavaScript para cargar los iconos -->
+  <script>
+    // Cargar el archivo icons.html
+    fetch('../../../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+</body>
+</html>
