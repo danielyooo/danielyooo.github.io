@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 2 (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 2 (Origins)</strong></h1>
+    <img src="foto.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+                              <!-- Reproductor de audio(https://yoump3.boo/) -->
+    <section>
+      <h2>Reproducir canción</h2>
+      <audio controls>
+        <source src="cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+      </audio>
+      <br>
+    </section>
+    <br>
+     <!-- Fin de audio -->
+      Para reproducir la canción deberemos de interactuar con tres radios en el siguiente orden. <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="1.png" width="600" height="350" class="slide-image">
+                <div class="caption">1. Dentro del gigante de Freya.</div>
+            </div>
+            <div class="slide">
+                <img src="2.png" width="600" height="350" class="slide-image">
+                <div class="caption">2. Bajo el lugar de excavación.</div>
+            </div>
+            <div class="slide">
+                <img src="3.png" width="600" height="350" class="slide-image">
+                <div class="caption">3. En el Crazy Place, cerca del pedestal de fuego.</div>
+            </div> 
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        
+      </div>
+
+
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
