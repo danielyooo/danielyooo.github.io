@@ -287,3 +287,34 @@ button.prev:hover, button.next:hover {
     right: 0px; /* Ajusta según tus necesidades */
   }
 }
+
+    /* Estilos personalizados para el reproductor de audio */
+    audio {
+      width: 100%;
+      max-width: 600px;
+      
+      
+      border-radius: 10px; /* Bordes redondeados */
+      overflow: hidden;
+    }
+    /* Estilos para navegadores basados en WebKit (Chrome, Safari) */
+    audio::-webkit-media-controls-panel {
+      background-color: #c74204; /* Fondo de los controles */
+    }
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button,
+    audio::-webkit-media-controls-volume-slider,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display,
+    audio::-webkit-media-controls-timeline {
+      color: #000000; /* Color de los botones y textos */
+      
+    }
+    /* Estilos adicionales */
+    audio::-webkit-media-controls-timeline {
+      background-color: #c74204; /* Fondo de la barra de progreso */
+    }
+    audio::-webkit-media-controls-volume-slider {
+      background-color: #c74204; /* Fondo del control de volumen */
+    }
