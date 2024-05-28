@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortero (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mortero (Origins)</strong></h1>
+    <img src="mortero_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir los morteros deberemos de ir a Tank Station y obtener una piedra de la mesa. (cada jugador deberá de repetir estos pasos si quiere los morteros).<br>
+             <img src="piedra1.png" width="600" height="350"class="responsive-image"><br>
+             La llevaremos al lavadero de la iglesia y la pondremos en el agua. <br>
+             <img src="limpiar.png" width="600" height="350"class="responsive-image"><br>
+             Tendremos que matar zombies CaC (recomiendo tener los puños) para limpiar la piedra.
+             <img src="almas.png" width="600" height="350"class="responsive-image"><br>
+             Hecho esto llevaremos la piedra de nuevo a la mesa de Tank Station, pero no podremos caminar encima del agua sucia o barro. <br>
+             <img src="agua.png" width="600" height="350"class="responsive-image"><br>
+             Al llegar y poner la piedra en la mesa, tendremos que volver a matar CaC. <br>
+             <img src="almas2.png" width="600" height="350"class="responsive-image"><br>
+             Cuando terminemos, los morteros aparecerán en la mesa. <br>
+             <img src="mortero_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

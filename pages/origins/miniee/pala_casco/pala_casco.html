@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pala y Casco de Oro (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Pala y Casco de Oro (Origins)</strong></h1>
+    <img src="casco.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Primero debemos obtener la pala, luego la pala de oro y finalmente el casco de oro. <br>
+              <!-- Palas -->
+              <strong>Localizaciones de la pala:</strong><br>
+              <div id="slider1" class="slider">
+                 <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                 <div class="slide active">
+                     <img src="pala1.png" width="600" height="350" class="slide-image">
+                     <div class="caption">1. En el Spawn, en la pared de la derecha.</div>
+                    </div>
+                 <div class="slide">
+                     <img src="pala2.png" width="600" height="350" class="slide-image">
+                     <div class="caption">2. En el generador 1, de camino al generador 3.</div>
+                 </div>
+                    <div class="slide">
+                     <img src="pala3.png" width="600" height="350" class="slide-image">
+                     <div class="caption">3. En la mina de rayos, en la izquierda.</div>
+                 </div>
+                 <div class="slide">
+                     <img src="pala4.png" width="600" height="350" class="slide-image">
+                     <div class="caption">4. En la mina de viento, en la derecha.</div>
+                 </div>
+                 <div class="slide">
+                     <img src="pala5.png" width="600" height="350" class="slide-image">
+                     <div class="caption">5. Detrás del tanque bajo la iglesia, tras las escaleras.</div>
+                 </div>
+                 <div class="slide">
+                     <img src="pala6.png" width="600" height="350" class="slide-image">
+                     <div class="caption">6. Detrás del tanque bajo la iglesia, a la derecha de la mesa de fabricación.</div>
+                 </div>
+                <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                 </div>
+                 <!-- Palas-->
+                 </div>
+   
+             <strong>Pala de Oro:</strong><br>
+             Para obtener la pala de oro, lo único que debemos hacer es excavar 30 montones de huesos. <br>
+             <img src="excavar30.png" width="600" height="350"class="responsive-image"><br>
+             Llegado el momento, escucharemos un sonido y podremos ver que tenemos la pala de oro. <br>
+             <img src="pala.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Casco de Oro:</strong><br>
+             Para el casco, tendremos que seguir excavando hasta que aparezca. Para este, no hay un número determinado de veces, podría ser la primera vez que excavas después de la pala de oro o la décima. <br>
+             <img src="casco.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dron de Maxis (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Dron de Maxis (Origins)</strong></h1>
+    <img src="dron_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Primera parte:</strong> En el Spawn. justo a la izquierda de las escaleras.<br>
+             <img src="dron1.png" width="600" height="350"class="responsive-image"><br><br>
+             <strong>Segunda parte:</strong><br><br> En la zona de la iglesia.<br>
+            <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="dron2a.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Camino del tanque hacia generador 4.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="dron2b.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Camino del tanque hacia la iglesia.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="dron2c.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Dentro de la mina de hielo.</div>
+                   </div> 
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                   
+                 </div>
+             <strong>Tercera parte:</strong> En el Sitio de Excavación.<br>
+             <div id="slider3" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider3')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="dron3a.png" width="600" height="350" class="slide-image">
+                       <div class="caption">A la izquierda del PaP.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="dron3b.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Bajo el PaP, donde encontramos el gramófono.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="dron3c.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Encima de una caja, cerca de los primis.</div>
+                   </div> 
+               <button class="next" onclick="changeSlide(1, 'slider3')">&#10095;</button>
+                   
+                 </div>
+             <strong>Fabricar:</strong> Bajo la iglesia es el más recomendado.<br>
+             <img src="dron_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

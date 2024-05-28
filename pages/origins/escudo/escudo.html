@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escudo (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Escudo (Origins)</strong></h1>
+    <img src="escudo_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Primera parte:</strong> En el camino de generador 2.<br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="escudo1a.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Saliendo del Laboratorio, dentro de la primera trinchera .</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo1b.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella del gigante, encima de Tank Station.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo1c.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En el camino de la derecha cuando vamos al búnker.</div>
+                   </div> 
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                   
+                 </div>
+             <strong>Segunda parte:</strong> En el camino de generador 3.<br>
+             <div id="slider2" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider2')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="escudo2a.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Dentro de la mina de fuego.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo2b.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Dentro de la trinchera, encima de una carretilla.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo2c.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Detrás de la caja bajo el generador 3.</div>
+                   </div> 
+               <button class="next" onclick="changeSlide(1, 'slider2')">&#10095;</button>
+                   
+                 </div>
+             <strong>Tercera parte:</strong> En la zona del medio.<br>
+             <div id="slider3" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider3')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="escudo3a.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella bajo el sitio de excavación, orientada al generador 5.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo3b.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella frente al sitio de excavación, con el camino a la iglesia.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="escudo3c.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella del generador 4.</div>
+                   </div> 
+               <button class="next" onclick="changeSlide(1, 'slider3')">&#10095;</button>
+                   
+                 </div>
+             <strong>Fabricar:</strong> En la mina de viento es el más recomendado.<br>
+             <img src="escudo_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejora de Fuego (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejora de Fuego (Origins)</strong></h1>
+    <img src="fuego_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir el bastón mejorado, deberemos de realizar una tarea en el Crazy Place y otra en Origins. <br>
+             <!-- Disco-->
+             El primer paso será conseguir el disco de nuestro bastón<br>
+             Estas son las posibles localizaciones: <br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="disco1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En el banco de la iglesia.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="disco2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Encima de una de las cajas del generador 6</div>
+                   </div>
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button> 
+                 </div>
+                 <!-- Fin disco-->
+              <strong>Crazy Place:</strong> <br><br>
+              En la zona roja del bastón de fuego veremos cuatro hogueras apagadas. <br>
+              <img src="matar.png" width="600" height="350"class="responsive-image"><br>
+              Tendremos que matar zombies cerca de ellas para encenderlas. <br>
+              <img src="hoguera.png" width="600" height="350"class="responsive-image"><br>
+
+                 <strong>Origins:</strong> <br><br>
+                Tendremos que ir a la iglesia y ver las antorchas que están encendidas. <br>
+                Cada antorcha representará un número, tocará recordarlo sin importar el orden. <br>
+                <img src="antorchas.png" width="600" height="350"class="responsive-image"><br>
+                Después bajaremos a la zona del tanque y dispararemos a los números de las paredes que corresponden según las antorchas. Hay que hacerlo muy rápido. <br>
+                <div id="slider3" class="slider">
+                    <button class="prev" onclick="changeSlide(-1, 'slider3')">&#10094;</button>
+                       <div class="slide active">
+                           <img src="num1.png" width="600" height="350" class="slide-image">
+                       </div>
+                       <div class="slide">
+                           <img src="num2.png" width="600" height="350" class="slide-image">
+                       </div>
+                       <div class="slide">
+                           <img src="num3.png" width="600" height="350" class="slide-image">
+                       </div> 
+                   <button class="next" onclick="changeSlide(1, 'slider3')">&#10095;</button> 
+                     </div>
+              <!-- Genérico para todos los bastones-->
+              El siguiente paso es ir a la zona de excavación y mover los discos a color que corresponde al bastón. <br>
+              <img src="color.png" width="600" height="350"class="responsive-image"><br>
+              Bajaremos y veremos una piedra que tendremos que disparar con el bastón. <br>
+              <img src="piedra.png" width="600" height="350"class="responsive-image"><br>
+              Iremos al Crazy Place y pondremos el bastón en su pedestal. Lo alimentaremos matando zombies y Samantha hablará cuando se complete. <br>
+              <img src="fuego_final.png" width="600" height="350"class="responsive-image"><br>
+               <!-- Fin genérico para todos los bastones-->
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

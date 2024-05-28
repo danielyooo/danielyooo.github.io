@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puños (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Puños (Origins)</strong></h1>
+    <img src="puños_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir los puños deberemos de matar alrededor de 30 zombies en cada una de las 4 cajas del mapa.<br>
+             <img src="cargar.png" width="600" height="350"class="responsive-image"><br>
+             <strong>Localizaciones de las cajas:</strong><br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella del gigante, frente a la iglesia.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella del gigante, bajo la excavación.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="3.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En la huella del gigante del generador 5.</div>
+                   </div> 
+                   <div class="slide">
+                        <img src="4.png" width="600" height="350" class="slide-image">
+                    <div class="caption">En la huella del gigante del generador 4.</div>
+                </div> 
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                   
+                 </div>
+             Si el gigante pisa la caja incompleta, las almas se resetean y debemos volver a empezar esa caja, por lo que debemos ser rápidos. <br>
+             Iremos al generador 1 o al 6 y en la caja podremos reclamar los puños de recompensa.<br>
+             <img src="puños_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

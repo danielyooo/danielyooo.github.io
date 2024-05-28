@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colisionador Magno (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Colisionador Magno (Origins)</strong></h1>
+    <img src="gun_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> <br>
+             Tener el Dron de Maxis.<br>
+             Deberemos de ir con el dron a buscar 4 discos por el mapa: <br>
+            <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Encima de unas tablas en el PaP.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Encima de unas tablas en el generador 5.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="3.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En el tejado de la iglesia, desde el lugar por donde sale el tanque.</div>
+                   </div> 
+                   <div class="slide">
+                       <img src="4.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Según salimos del Laboratorio hacia generador 2, en unos restos de madera con fuego.</div>
+                </div> 
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                   
+                 </div>
+   
+             Obtenidos los cuatro discos, encontraremos el arma especial mejorada frente al PaP.<br>
+             <img src="gun_final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

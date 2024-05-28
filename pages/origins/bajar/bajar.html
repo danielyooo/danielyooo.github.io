@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bajar a la Excavación (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Bajar a la Excavación (Origins)</strong></h1>
+    <img src="escalera.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para bajar a la excavación, tendremos que buscar un disco y el gramófono. <br>
+             <strong>Localizaciones del disco:</strong><br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="disco1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Subiendo a la Excavación desde el Búnker.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="disco2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En el camino que va de Excavación a la Iglesia.</div>
+                   </div>
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                 </div>
+            Para encontrar el gramófono bajaremos por la Excavación y lo encontraremos en el suelo.<br>
+            <img src="gramo.png" width="600" height="350"class="responsive-image"><br>
+            Pondremos el gramófono en la mesa y podremos bajar al lugar. <br>
+            <img src="colocar.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bastón de Fuego (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Bastón de Fuego (Origins)</strong></h1>
+    <img src="fuego_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir el bastón de fuego, debermos de conseguir sus tres piezas. <br><br>
+             <strong>Primera pieza:</strong><br><br>
+             Buscaremos un avion en el cielo con una luz amarilla y le dispararemos. <br>
+             <img src="avion.png" width="600" height="350"class="responsive-image"><br>
+             La pieza caerá desde el cielo y la podremos obtener.<br>
+             <img src="pieza1.png" width="600" height="350"class="responsive-image"><br><br>
+
+             <strong>Segunda pieza:</strong><br><br>
+             Para la siguiente pieza, solo deberemos de darle energía al generador 6, que esta cerca de la iglesia. La pieza aparecerá en la caja. <br>
+             <img src="pieza2.png" width="600" height="350"class="responsive-image"><br><br>
+
+             <strong>Tercera pieza:</strong><br><br>
+             Tendremos que esperar a que aparezca un Panzer y matarlo. El primero aparece en la ronda 8. <br>
+             <img src="panzer.png" width="600" height="350"class="responsive-image"><br>
+             Muerto el panzer, nos dará la pieza.<br>
+             <img src="pieza3.png" width="600" height="350"class="responsive-image"><br><br>
+
+             <!-- Genérico para todos los bastones-->
+              Cuando tengamos las tres piezas, iremos con el gramófono (se encuentra en la zona de excavación), a la mina de fuego cerca del Laboratorio(Spawn). <br>
+              <img src="mina_fuego.png" width="600" height="350"class="responsive-image"><br>
+              Bajaremos por la mina y colocaremos el gramófono para que el portal aparezca. <br>
+              <img src="portal.png" width="600" height="350"class="responsive-image"><br>
+              Después iremos a nuestro pedestal correspondiente y obtendremos la piedra de fuego. <br>
+              <img src="piedra.png" width="600" height="350"class="responsive-image"><br>
+              Finalmente iremos a la zona de excavación y construiremos el bastón. <br>
+              <img src="fuego_final.png" width="600" height="350"class="responsive-image"><br>
+               <!-- Fin genérico para todos los bastones-->
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
