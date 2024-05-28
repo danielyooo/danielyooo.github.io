@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easter Egg (Origins)</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Easter Egg (Origins)</strong></h1>
+    <img src="ee_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> <br>
+             Tener los 4 bastones mejorados, los puños, el dorn de Maxis y los morteros. <br>
+             Cumpliendo todos los requisitos, el primer paso será entrar a los gigantes a colocar los bastones. <br><br>
+             <strong>Colocar bastones en los gigantes:</strong><br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="gig1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En Thor (Generador 2 y 3), el bastón de Rayos.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="gig2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En Odin( generador 4, 5 y Excavación), el bastón de Viento.</div>
+                   </div>
+                   <div class="slide">
+                    <img src="gig3.png" width="600" height="350" class="slide-image">
+                    <div class="caption">En Freya(camino de iglesia), el bastón de Hielo.</div>
+                </div>
+                <div class="slide">
+                    <img src="cuarto.png" width="600" height="350" class="slide-image">
+                    <div class="caption">El bastón de Fuego, en un soporte nuevo que esta bajo la Excavación.</div>
+                </div>
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                 </div>
+                 Hecho esto todos los gigantes aparecerán a la vez.<br>
+                 <img src="tres.png" width="600" height="350"class="responsive-image"><br>
+                 Un jugador deberá entrar por el único pie de gigante abierto. <br>
+                 Si estamos en solo, deberemos esperar a que el gigante del medio la tenga abierta para meternos en las huellas del generador 5. <br>
+                 <img src="solo.png" width="600" height="350"class="responsive-image"><br>
+                 El jugador de dentro, tendrá que coordinarse con el de fuera para pulsar el botón rojo. <br>
+                 <img src="boton.png" width="600" height="350"class="responsive-image"><br>
+                 El de fuera deberá de estar a la derecha del generador 5, cerca de la avioneta estrellada, y tirar un mortero en el sello a la vez que el jugador pulsa el botón.<br>
+                 Si estamos en solitario, pulsaremos el botón y rápidamente nos bajaremos del gigante y tiraremos el mortero. Disponemos de 10 segundos<br> 
+                 Por eso tenemos que esperar al gigante del medio, para estar cerca al salir.<br>
+                 <img src="sello.png" width="600" height="350"class="responsive-image"><br>
+                 Luego lanzaremos el dron de Maxis desde el lugar y este entrará en el sello. <br>
+                 <img src="dron.png" width="600" height="350"class="responsive-image"><br>
+                 Al hacer esto, aparecerán varios Panzer que tendremos que matar. (Los bastones vuelven a estar disponibles en el Sitio de Excavación). <br>
+                 <img src="panzer.png" width="600" height="350"class="responsive-image"><br>
+                 Para el siguiente paso necesitaremos sangre zombie.<br>
+                 Aquí un truco para conseguirla: <br>
+                 <button class="option-button" id="../miniee/sangrefree/sangrefree">Sangre de Zombie</button><br>
+                 En el modo de sangre, buscaremos un avión con una luz naranja y le dispararemos. <br>
+                 <img src="avion.png" width="600" height="350"class="responsive-image"><br>
+                 Rápidamente, buscaremos a un zombie que está dando vueltas alrededor de la Excavación. 
+                 Lo buscaremos dando vueltas a la Excavación en sentido contrario a las agujas del reloj y lo mataremos. (Todo esto con la sangre zombie activa).
+                 <img src="zombie.png" width="600" height="350"class="responsive-image"><br>
+                 Al matarlo podremos obtener de nuevo el Dron de Maxis. (Aún así, deberemos de volver a buscarlo en la mesa donde lo construimos).<br>
+                 <img src="dron_sangre.png" width="600" height="350"class="responsive-image"><br>
+                 El siguiente paso sirve para mejorar los puños. <br>
+                 Tendremos que bajar al lugar de excavación y matar con los puños los zombies que expulsan humo blanco. <br>
+                 <img src="humo.png" width="600" height="350"class="responsive-image"><br>
+                 Cuando matemos suficientes, este objeto aparecerá y al obtenerlo habremos mejorado los puños. <br>
+                 <img src="mejorapuños.png" width="600" height="350"class="responsive-image"><br>
+                 El últiumo paso será colocar los 4 bastones en sus correspondientes pedestales del Crazy Place y alimentarlos matando a 100 zombies. <br>
+                 <img src="colocar.png" width="600" height="350"class="responsive-image"><br>
+                 Las almas empezará a subir hasta que se abra el portal. <br>
+                 <img src="matar.png" width="600" height="350"class="responsive-image"><br>
+                 Lanzaremos el dron de Maxis por el techo para que aparezca la grieta. <br>
+                 <img src="dron_final.png" width="600" height="350"class="responsive-image"><br>
+                 Interactuamos con la grieta y habremos completado el Easter Egg de Origins. <br>
+                 <img src="final.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

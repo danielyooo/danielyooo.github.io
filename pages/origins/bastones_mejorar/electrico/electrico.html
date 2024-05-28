@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejora de Rayos (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Mejora de Rayos (Origins)</strong></h1>
+    <img src="rayo_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir el bastón mejorado, deberemos de realizar una tarea en el Crazy Place y otra en Origins. <br>
+             <!-- Disco-->
+             El primer paso será conseguir el disco de nuestro bastón<br>
+             Estas son las posibles localizaciones: <br>
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="disco1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">En una carreta fuera de generador 4.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="disco2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">A la derecha del portal de viento.</div>
+                   </div>
+                   <div class="slide">
+                    <img src="disco3.png" width="600" height="350" class="slide-image">
+                    <div class="caption">Encima de una mesa en generador 4.</div>
+                </div>
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button> 
+                 </div>
+                 <!-- Fin disco-->
+              <strong>Crazy Place:</strong> <br><br>
+              En la zona morada del bastón de rayos veremos siete triángulos morados. (Los 5 de arriba son insignificantes). <br>
+              Enumerandolos del 1 al 7, deberemos disparar con el bastón las siguientes secuencias de números: <br>
+              1 - 3 - 6 <br>
+              3 - 5 - 7 <br>
+              2 - 4 - 6 <br>
+              <img src="symbol.png" width="600" height="350"class="responsive-image"><br>
+              Si lo hicimos bien iremos al siguiente paso, si no repetiremos (el cuarto disparo será el primero de la siguiente cadena). <br>
+
+                 <strong>Origins:</strong> <br><br>
+                Tendremos que interactuar varias veces con unos paneles de electricidad y quitarles la chispa que tienen. <br>
+                Si seguimos este recorrido no habrán fallos: <br>
+                <div id="slider3" class="slider">
+                    <button class="prev" onclick="changeSlide(-1, 'slider3')">&#10094;</button>
+                       <div class="slide active">
+                           <img src="1.png" width="600" height="350" class="slide-image">
+                           <div class="caption">1. En el generador 5.</div>
+                       </div>
+                       <div class="slide">
+                           <img src="2.png" width="600" height="350" class="slide-image">
+                           <div class="caption">2. Detrás del tanque en la iglesia.</div>
+                       </div>
+                       <div class="slide">
+                           <img src="3.png" width="600" height="350" class="slide-image">
+                           <div class="caption">3. En la iglesia, detrás del lavadero.</div>
+                       </div> 
+                       <div class="slide">
+                           <img src="4.png" width="600" height="350" class="slide-image">
+                           <div class="caption">4. En el generador 4, cerca de la mina de viento.</div>
+                       </div> 
+                       <div class="slide">
+                           <img src="5.png" width="600" height="350" class="slide-image">
+                           <div class="caption">5. En el Laboratorio, muy cerca del Spawn.</div>
+                       </div> 
+                       <div class="slide">
+                           <img src="6.png" width="600" height="350" class="slide-image">
+                           <div class="caption">6. En Tank Station, cerca del tanque.</div>
+                       </div> 
+                       <div class="slide">
+                           <img src="7.png" width="600" height="350" class="slide-image">
+                           <div class="caption">7. En el Sitio de Excavación, camino a la iglesia.</div>
+                       </div> 
+                   <button class="next" onclick="changeSlide(1, 'slider3')">&#10095;</button> 
+                     </div>
+              <!-- Genérico para todos los bastones-->
+              Si ya no aparecen más chispas en los paneles, el siguiente paso es ir a la zona de excavación y mover los discos a color que corresponde al bastón. <br>
+              <img src="color.png" width="600" height="350"class="responsive-image"><br>
+              Bajaremos y veremos una piedra que tendremos que disparar con el bastón. <br>
+              <img src="piedra.png" width="600" height="350"class="responsive-image"><br>
+              Iremos al Crazy Place y pondremos el bastón en su pedestal. Lo alimentaremos matando zombies y Samantha hablará cuando se complete. <br>
+              <img src="rayo_final.png" width="600" height="350"class="responsive-image"><br>
+               <!-- Fin genérico para todos los bastones-->
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

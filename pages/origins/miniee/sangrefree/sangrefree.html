@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangre Zombie (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Sangre Zombie (Origins)</strong></h1>
+    <img src="sangre.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             <strong>Requisitos:</strong> <br>
+             Bastón de hielo.<br>
+             Para conseguir un sangre zombie que nos puede ayudar con el Easter Egg, deberemos de disparar a tres carretas prendidas de fuego con un disparo simple del bastón de hielo. <br>
+             <strong>Localizaciones de las carretas:</strong><br>
+            <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                   <div class="slide active">
+                       <img src="carro1.png" width="600" height="350" class="slide-image">
+                       <div class="caption">De camino al generador 4, desde Excavación.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="carro2.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Saliendo del Búnker, antes de la Excavación.</div>
+                   </div>
+                   <div class="slide">
+                       <img src="carro3.png" width="600" height="350" class="slide-image">
+                       <div class="caption">Antes de la huella del generador 5.</div>
+                   </div> 
+
+               <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                   
+                 </div>
+   
+             La sangre zombie aparecerá al lado del PaP.<br>
+             <img src="sangre.png" width="600" height="350"class="responsive-image"><br>
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>

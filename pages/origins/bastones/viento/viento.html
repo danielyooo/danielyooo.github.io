@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bastón de Viento (Origins)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Bastón de Viento (Origins)</strong></h1>
+    <img src="viento_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+        <p> 
+            <div class="title-with-image">
+             Para conseguir el bastón de viento, deberemos de conseguir sus tres piezas. <br>
+             Para ello necesitaremos entrar en los tres gigantes: <br>
+              <!-- Gigantes-->
+             <div id="slider1" class="slider">
+                <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+                <div class="slide active">
+                        <img src="freya.png" width="600" height="350" class="slide-image">
+                        <div class="caption">1. Gigante de la iglesia.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="odin.png" width="600" height="350" class="slide-image">
+                        <div class="caption">2. Gigante del medio.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="thor.png" width="600" height="350" class="slide-image">
+                        <div class="caption">3. Gigante de los generadores 2 y 3.</div>
+                       </div> 
+                   <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+                       
+                </div>
+             Dispararemos al círculo amarillo bajo el pie del gigante para que la compuerta se abra y podamos entrar. <br>
+             <img src="pata.png" width="600" height="350"class="responsive-image"><br>
+             Encontraremos las piezas en cada uno de los gigantes <br>
+             <img src="pieza.png" width="600" height="350"class="responsive-image"><br>
+              <!-- Fin gigantes-->
+              
+              <!-- Genérico para todos los bastones-->
+              Cuando tengamos las tres piezas, iremos con el gramófono (se encuentra en la zona de excavación), a la mina de viento cerca del Generador 4. <br>
+              <img src="mina_viento.png" width="600" height="350"class="responsive-image"><br>
+              Bajaremos por la mina y colocaremos el gramófono para que el portal aparezca. <br>
+              <img src="portal.png" width="600" height="350"class="responsive-image"><br>
+              Después iremos a nuestro pedestal correspondiente y obtendremos la piedra de viento. <br>
+              <img src="piedra.png" width="600" height="350"class="responsive-image"><br>
+              Finalmente iremos a la zona de excavación y construiremos el bastón. <br>
+              <img src="viento_final.png" width="600" height="350"class="responsive-image"><br>
+               <!-- Fin genérico para todos los bastones-->
+           </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+ <!-- JavaScript para cargar los iconos -->
+ <script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
