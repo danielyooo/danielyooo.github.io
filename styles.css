@@ -10,6 +10,31 @@ body {
   padding: 0;
   background-attachment: fixed; /* Fondo de pantalla fijo */
 }
+.help-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+a {
+  color: rgb(255, 136, 0); /* Color del enlace normal */
+  text-decoration: none; /* Sin subrayado */
+}
+
+a:visited {
+  color: rgb(255, 136, 0); /* Color del enlace visitado */
+}
+
+a:hover {
+  color: rgb(255, 164, 60); /* Color del enlace al pasar el ratón */
+}
+
+a:active {
+  color: rgb(255, 164, 60); /* Color del enlace activo (al hacer clic) */
+}
 
 .container {
   max-width: 800px;

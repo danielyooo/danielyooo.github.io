@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     slider1: 0,
     slider2: 0,
     slider3: 0,
-    slider4: 0
+    slider4: 0,
+    slider5: 0,
+    slider6: 0
   };
 
   function showSlides(sliderId) {
@@ -44,3 +46,5 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlides('slider2');
   showSlides('slider3');
   showSlides('slider4');
+  showSlides('slider5');
+  showSlides('slider6');

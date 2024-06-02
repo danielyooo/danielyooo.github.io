@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leviathan</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Leviathan(EN CONSTRUCCIÓN)</h1>
+    <h2 class="title">Steam Workshop ID: 2112576356 </h2>
+    <div class="options">
+      <div class="column">
+        <button class="option-button" id="arpon/arpon">Arpón</button>
+        <br>
+        <button class="option-button" id="arpon_mejorar/arpon_mejorar">Mejorar Arpón</button>
+        <br>
+        <button class="option-button" id="escudo/escudo">Escudo</button>
+        <br>
+        <button class="option-button" id="poseidon/poseidon">Tridente de Poseidón</button>
+        <br>
+
+      </div>
+      <div class="column">     
+        <button class="option-button" id="pap/pap">Pack-A-Punch</button>
+        <br>
+        <button class="option-button" id="code/code">Código</button>
+        <br>
+        <button class="option-button" id="ee/ee">Easter Egg</button>
+        <br>
+        <button class="option-button" id="miniee/minieel">Mini Easter Eggss</button>
+        <br>
+      </div>
+    </div>
+    <br><img src="map.png" width="1280" height="720" class="responsive-image">        <br>
+    <div class="functions inactive" id="functionsContainer">
+      <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
+    </div>
+  </div>
+
+  <script src="../../script.js"></script>
+  <!-- JavaScript para cargar los iconos -->
+  <script>
+    // Cargar el archivo icons.html
+    fetch('../../icons/icons.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insertar el contenido de icons.html al final del body
+        document.body.insertAdjacentHTML('beforeend', data);
+        
+        // Agregar eventos de clic a los iconos
+        document.getElementById('goToIndex').addEventListener('click', function() {
+          window.location.href = '../../index.html';
+        });
+
+        document.getElementById('goBack').addEventListener('click', function() {
+          window.history.back();
+        });
+      })
+      .catch(error => console.error('Error loading icons:', error));
+  </script>
+  <!-- JavaScript para cargar los iconos -->
+  <a href="../../workshop/workshop.html">
+    <img src="../../workshop/ayuda.png" alt="Ayuda" class="help-button">
+  </a>
+</body>
+</html>

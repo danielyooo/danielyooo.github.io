@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Granadas Matrioshka (Call of the Dead)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Granadas Matrioshka (Call of the Dead)</strong></h1>
+    <img src="doll_main.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+
+      Para obtener las granada deberemos de hacer lo siguiente.<br>
+      El primer paso es ir al cuarto del Jügger-Nog e interactuar con el botón rojo. <br>
+      <img src="1.png" width="600" height="350"class="responsive-image"><br>
+      Luego tendremos que presionar 4 botones que se encienden de manera aleatoria y solo tendremos un tiempo para hacerlo. <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="2.png" width="600" height="350" class="slide-image">
+                <div class="caption">Frente al botón rojo del inicio.</div>
+            </div>
+            <div class="slide">
+                <img src="3.png" width="600" height="350" class="slide-image">
+                <div class="caption">Al lado de las escaleras que van al Jügger-Nog.</div>
+            </div>
+            <div class="slide">
+                <img src="4.png" width="600" height="350" class="slide-image">
+                <div class="caption">En la sala contraria, a la izquierda.</div>
+            </div> 
+            <div class="slide">
+                <img src="5.png" width="600" height="350" class="slide-image">
+                <div class="caption">Siguiendo este último camino, bajo la cubierta.</div>
+            </div> 
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+      </div>
+      El siguiente paso será subir a la parte alta de la proa del barco y disparar al botón rojo de la grúa.<br>
+      <img src="6.png" width="600" height="350"class="responsive-image"><br>
+      Cuando la grúa tenga la caja, lanzaremos una granada (recomiendo Sémtex) que la romperá. <br>
+      <img src="7.png" width="600" height="350"class="responsive-image"><br>
+      La muñeca de Samantha caerá y tendremos que interactuar con ella. <br>
+      <img src="8.png" width="600" height="350"class="responsive-image"><br>
+      Después 5 muñecas aleatorias aparecerán por el mapa y tendremos que dispararles en un tiempo determinado. <br>
+      De las muñecas sonará una caja de música que nos guiará hasta ellas. <br>
+      Localizaciñon de todas las muñecas: <br>
+            <div id="slider2" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider2')">&#10094;</button>
+            <div class="slide active">
+                <img src="sam1.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam2.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam3.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam4.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam5.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam6.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam7.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam8.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam9.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam10.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam11.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam12.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam13.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="sam14.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="sam15.png" width="600" height="350" class="slide-image">
+            </div> 
+
+        <button class="next" onclick="changeSlide(1, 'slider2')">&#10095;</button>
+      </div>
+      Si escuchamos el sonido de confirmación volveremos a la muñeca de Samantha principal he interactuaremos con ella. <br>
+      Esta nos dará las granadas Matrioshka.<br>
+      <img src="doll_final.png" width="600" height="350"class="responsive-image"><br>
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="../../../../script.js"></script>
+<!-- JavaScript para cargar los iconos -->
+<script>
+  // Cargar el archivo icons.html
+  fetch('../../../../icons/icons.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+      
+      // Agregar eventos de clic a los iconos
+      document.getElementById('goToIndex').addEventListener('click', function() {
+        window.location.href = '../../../../index.html';
+      });
+
+      document.getElementById('goBack').addEventListener('click', function() {
+        window.history.back();
+      });
+    })
+    .catch(error => console.error('Error loading icons:', error));
+</script>
+<!-- JavaScript para cargar los iconos -->
+</body>
+</html>
