@@ -20,13 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     slider1: 0,
     slider2: 0,
     slider3: 0,
-<<<<<<< HEAD
     slider4: 0,
     slider5: 0,
     slider6: 0
-=======
-    slider4: 0
->>>>>>> 3cb18b5a35f0c8b6ce9bf7ef5947c47e1c2e04c3
   };
 
   function showSlides(sliderId) {
@@ -50,8 +46,5 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlides('slider2');
   showSlides('slider3');
   showSlides('slider4');
-<<<<<<< HEAD
   showSlides('slider5');
   showSlides('slider6');
-=======
->>>>>>> 3cb18b5a35f0c8b6ce9bf7ef5947c47e1c2e04c3
