@@ -12,9 +12,9 @@
     <h2 class="title">Steam Workshop ID: 2112576356 </h2>
     <div class="options">
       <div class="column">
-        <button class="option-button" id="arpon/arpon">Arpón</button>
+        <button class="option-button" id="pap/pap">Pack-A-Punch</button>
         <br>
-        <button class="option-button" id="arpon_mejorar/arpon_mejorar">Mejorar Arpón</button>
+        <button class="option-button" id="arpon/arpon">Mejorar Arpón</button>
         <br>
         <button class="option-button" id="escudo/escudo">Escudo</button>
         <br>
@@ -23,13 +23,13 @@
 
       </div>
       <div class="column">     
-        <button class="option-button" id="pap/pap">Pack-A-Punch</button>
+        <button class="option-button" id="puños/puños">Puños</button>
         <br>
         <button class="option-button" id="code/code">Código</button>
         <br>
         <button class="option-button" id="ee/ee">Easter Egg</button>
         <br>
-        <button class="option-button" id="miniee/minieel">Mini Easter Eggss</button>
+        <button class="option-button" id="miniee/miniee">Mini Easter Eggss</button>
         <br>
       </div>
     </div>
@@ -40,29 +40,9 @@
   </div>
 
   <script src="../../script.js"></script>
-  <!-- JavaScript para cargar los iconos -->
-  <script>
-    // Cargar el archivo icons.html
-    fetch('../../icons/icons.html')
-      .then(response => response.text())
-      .then(data => {
-        // Insertar el contenido de icons.html al final del body
-        document.body.insertAdjacentHTML('beforeend', data);
-        
-        // Agregar eventos de clic a los iconos
-        document.getElementById('goToIndex').addEventListener('click', function() {
-          window.location.href = '../../index.html';
-        });
-
-        document.getElementById('goBack').addEventListener('click', function() {
-          window.history.back();
-        });
-      })
-      .catch(error => console.error('Error loading icons:', error));
-  </script>
-  <!-- JavaScript para cargar los iconos -->
+  
   <a href="../../workshop/workshop.html">
-    <img src="../../workshop/ayuda.png" alt="Ayuda" class="help-button">
+    <img src="../../workshop/workshop.png" alt="Ayuda" class="ws-button" style="width: 28px; height: 28px;">
   </a>
 </body>
 </html>

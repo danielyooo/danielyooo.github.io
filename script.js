@@ -48,3 +48,33 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlides('slider4');
   showSlides('slider5');
   showSlides('slider6');
+// ICONOS
+function loadIcons() {
+  const iconsPath = '/icons/icons.html'; // Ruta fija a icons.html
+  const indexPath = '/index.html'; // Ruta fija a index.html
+
+  fetch(iconsPath)
+    .then(response => response.text())
+    .then(data => {
+      // Insertar el contenido de icons.html al final del body
+      document.body.insertAdjacentHTML('beforeend', data);
+
+      // Agregar eventos de clic a los iconos
+      const goToIndex = document.getElementById('goToIndex');
+      if (goToIndex) {
+        goToIndex.addEventListener('click', function() {
+          window.location.href = indexPath;
+        });
+      }
+
+      const goBack = document.getElementById('goBack');
+      if (goBack) {
+        goBack.addEventListener('click', function() {
+          window.history.back();
+        });
+      }
+    })
+    .catch(error => console.error('Error loading icons:', error));
+}
+
+document.addEventListener('DOMContentLoaded', loadIcons);

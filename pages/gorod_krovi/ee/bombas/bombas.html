@@ -85,7 +85,7 @@
       <button class="reload-button" onclick="reloadPage()"><img src="reload.png" alt="Reload"></button>
     </div>
   <script src="../../../../script.js"></script>
-  <!-- JavaScript para cargar los iconos -->
+
   <script>
     let currentNumber = 1; // Inicializamos el número actual en 1
     let interactionEnabled = true; // Variable para habilitar o deshabilitar la interacción con las imágenes
@@ -133,25 +133,6 @@
       location.reload(); // Recargar la página
     }
   </script>
-  <script>
-    // Cargar el archivo icons.html
-      fetch('../../../../../icons/icons.html')
-        .then(response => response.text())
-        .then(data => {
-          // Insertar el contenido de icons.html al final del body
-          document.body.insertAdjacentHTML('beforeend', data);
-          
-          // Agregar eventos de clic a los iconos
-          document.getElementById('goToIndex').addEventListener('click', function() {
-            window.location.href = '../../../../../index.html';
-          });
-  
-          document.getElementById('goBack').addEventListener('click', function() {
-            window.history.back();
-          });
-        })
-        .catch(error => console.error('Error loading icons:', error));
-    </script>
-  <!-- JavaScript para cargar los iconos -->
+  <script src="../../../../script.js"></script>
 </body>
 </html>
