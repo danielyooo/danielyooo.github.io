@@ -78,3 +78,15 @@ function loadIcons() {
 }
 
 document.addEventListener('DOMContentLoaded', loadIcons);
+// logo
+document.addEventListener('DOMContentLoaded', function() {
+  // Crea un nuevo elemento link para el favicon
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png'; // Cambiado a image/png
+  link.href = '/art/logo_transparente.png'; // Cambia este valor al camino correcto de tu logo.png
+
+  // Agrega el elemento link al head del documento
+  document.head.appendChild(link);
+});
+//logo
