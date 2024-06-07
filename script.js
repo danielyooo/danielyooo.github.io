@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     slider3: 0,
     slider4: 0,
     slider5: 0,
-    slider6: 0
+    slider6: 0,
+    slider7: 0,
+    slider8: 0,
+    slider9: 0,
+    slider10: 0
   };
 
   function showSlides(sliderId) {
@@ -48,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlides('slider4');
   showSlides('slider5');
   showSlides('slider6');
+  showSlides('slider7');
+  showSlides('slider8');
+  showSlides('slider9');
+  showSlides('slider10');
 // ICONOS
 function loadIcons() {
   const iconsPath = '/icons/icons.html'; // Ruta fija a icons.html

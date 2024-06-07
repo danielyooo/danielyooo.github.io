@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aba de oro (Leviathan)</title>
+  <link rel="stylesheet" href="../../../../../styles.css">
+</head>
+<body>
+  <div class="title-with-image">
+    <h1 class="title"><strong>Aba de oro (Leviathan)</strong></h1>
+    <img src="aba_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+      <div class="title-with-image">
+        <p><strong>Propiedades de la máscara:</strong><br>
+          Duración de esprintar mejorada.<br>
+          Capacidad de respirar bajo el agua.<br>
+          Resistes 1 golpe más de zombie.<br>
+          <strong>Cómo obternerlo:</strong><br>
+          Debemos de inundar todas las zona posibles de agua.<br>
+          Tendremos que lanzar granadas a las ventanas de las siguientes localizaciones para que estas se llenen de agua:<br>
+        </p>
+        <div id="slider1" class="slider">
+          <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+          <div class="slide active">
+            <img src="cafeteria.png" width="600" height="350" class="slide-image">
+            <div class="caption">La Cafeteria</div>
+          </div>
+          <div class="slide">
+            <img src="electricity.png" width="600" height="350" class="slide-image">
+            <div class="caption">La sala de la Electricidad</div>
+          </div>
+          <div class="slide">
+            <img src="labs.png" width="600" height="350" class="slide-image">
+            <div class="caption">Los Laboratorios</div>
+          </div> 
+          <div class="slide">
+            <img src="submarine.png" width="600" height="350" class="slide-image">
+            <div class="caption">La sala del Submarino</div>
+          </div>
+          <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        </div>
+        <p>
+          También tendremos que esperar a que las tres excavadoras perforen el Túnel 11, el Almacén y el Biodomo. <br>
+          Con los siguientes códigos para introducir en el PaP las excavadoras empezarán a funcionar:<br>
+          <img src="perforar.png" width="600" height="350" class="responsive-image"><br>
+          Cuando escuchemos el sonido de confirmación podremos ir al portal cerca del Almacén. <br>
+          <img src="portal.png" width="600" height="350" class="responsive-image"><br>
+          En el Cuarto de Samantha encontraremos la máscara.<br>
+          <img src="aba_final.png" width="600" height="350" class="responsive-image"><br>
+        </p>
+      </div>
+    </section>
+    <!-- Más secciones aquí -->
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

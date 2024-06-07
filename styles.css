@@ -249,7 +249,7 @@ button.prev, button.next {
   font-size: 18px;
   transition: 0.6s ease;
   border: none;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.493);
   user-select: none;
   z-index: 10; /* Asegura que los botones estén por encima de otros elementos */
 }
@@ -265,7 +265,7 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-  background-color: rgb(230, 112, 16);
+  background-color: rgba(230, 112, 16, 0.514);
 }
 
 .caption {

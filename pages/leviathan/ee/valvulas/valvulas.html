@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Válvulas (Leviathan)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+  <style>
+    .body {
+        margin: 0px;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0; /* Cambiado de margin a padding */
+      }
+
+    .centered-paragraph {
+      width: 100%; /* Ajusta el ancho según tus necesidades */
+      margin: 0 auto; /* Centra el párrafo horizontalmente */
+      text-align: left; /* Alinea el texto a la izquierda */
+      background-color: rgb(0, 0, 0); /* Cambia este color según tus necesidades */
+      padding: 10px; /* Añade un poco de espacio alrededor del texto */
+      border: 4px solid #df02c1; /* Añade un borde opcional para mejor visualización */
+    }
+
+    .highlight {
+      color: #df02c1; /* Cambia este color según tus necesidades */
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .number-input {
+      position: absolute;
+      color: white;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      border: 1px solid #cccccc00;
+      background-color: rgb(0, 0, 0); /* Fondo semi-transparente */
+      transform: translate(-50%, -50%);
+    }
+    .number-input2 {
+      position: absolute;
+      color: white;
+      width: 35px;
+      height: 60px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      border: 1px solid #ffffff;
+      background-color: rgb(0, 0, 0); /* Fondo semi-transparente */
+      transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .number-input {
+        width: 15px;
+        height: 25px;
+        font-size: 18px;
+      }
+      .number-input2 {
+        position: absolute;
+        color: white;
+        width: 15px;
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        border: 1px solid #ffffff;
+        background-color: rgb(0, 0, 0); /* Fondo semi-transparente */
+        transform: translate(-50%, -50%);
+      }
+      
+    }
+
+    /* Para ocultar los controles de número en Chrome, Safari, Edge y Opera */
+    .number-input::-webkit-outer-spin-button,
+    .number-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Para ocultar los controles de número en Firefox */
+    .number-input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title"><strong>Válvulas (Leviathan)</strong></h1>
+    <p class="centered-paragraph">
+      En <span class="highlight"><strong>Nº</strong></span> = El número del lugar donde vimos el color de la válvula. <br>
+      <span class="highlight"><strong>Valve color</strong></span> = El color asociado al número de la válvula. <br>
+      En <span class="highlight"><strong>New presión</strong></span> = El número nuevo que nos dan en la sala de Leviathan. <br>
+    </p>
+    <br><br><br>
+    <div class="image-container">
+      <img src="valvs3.png" alt="Imagen de válvulas">
+      
+      <!-- Inputs en posiciones específicas -->
+      <input type="number" class="number-input" style="top: 11%; left: 18%;">
+      <input type="number" class="number-input" style="top: 11%; left: 36%;">
+      <input type="number" class="number-input" style="top: 11%; left: 55%;">
+      <input type="number" class="number-input" style="top: 11%; left: 74%;">
+      <input type="number" class="number-input" style="top: 11%; left: 92%;">
+      <input type="number" class="number-input2" style="top: 74%; left: 16%;">
+      <input type="number" class="number-input2" style="top: 74%; left: 35%;">
+      <input type="number" class="number-input2" style="top: 74%; left: 53%;">
+      <input type="number" class="number-input2" style="top: 74%; left: 72%;">
+      <input type="number" class="number-input2" style="top: 74%; left: 91%;">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const inputs = document.querySelectorAll('.number-input');
+
+      // Opcional: Añadir algún comportamiento a los inputs si es necesario
+      inputs.forEach(function(input) {
+        input.addEventListener('focus', function() {
+          this.select();
+        });
+      });
+    });
+  </script>
+  <script src="/script.js"></script>
+</body>
+</html>

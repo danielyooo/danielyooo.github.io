@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramienta colores (Leviathan)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+  <style>
+    .color-button {
+      width: 153px;
+      height: 317px;
+      margin: 0px;
+      font-size: 16px;
+      color: white;
+      border: 5px solid black;
+      border-radius: 12%;
+      cursor: pointer;
+      flex-shrink: 0; /* Previene que los botones se encojan */
+      background-size: cover; /* Asegura que la imagen cubra todo el botón */
+      background-position: center; /* Centra la imagen dentro del botón */
+    }
+
+    .red { background-image: url('rojo.png'); }
+    .green { background-image: url('verde.png'); }
+    .blue { background-image: url('azul.png'); }
+    .yellow { background-image: url('amarillo.png'); }
+
+    .red1 { background-color: red; }
+    .green1 { background-color: rgb(79, 216, 0); }
+    .blue1 { background-color: rgb(0, 174, 255); }
+    .yellow1 { background-color: yellow; }
+
+    .sequence {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* Centra los botones horizontalmente */
+      flex-wrap: nowrap; /* Asegura que los botones no se envuelvan en la siguiente fila */
+      gap: 10px; /* Espacio entre los botones */
+    }
+
+    .sequence-display {
+      margin-top: 20px;
+      font-size: 18px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .color-square {
+      width: 30px;
+      height: 30px;
+      margin: 3px;
+    }
+    @media (max-width: 600px) {
+      .color-button {
+        width: 25vw;  /* Asegura que los botones se mantengan cuadrados en pantallas pequeñas */
+        height: 52vw; /* Mantiene la proporción de 153px por 317px en vista móvil */
+      }
+      .sequence {
+        gap: 0px; /* Espacio entre los botones */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Herramienta colores (Leviathan)</h1>
+    <br>
+    <br> <strong>Registra cada nuevo color y aparecerá en la secuencia de debajo</strong>
+    <br>
+    <div class="sequence">
+      <button class="color-button red" onclick="addColor('red1')"></button>
+      <button class="color-button green" onclick="addColor('green1')"></button>
+      <button class="color-button blue" onclick="addColor('blue1')"></button>
+      <button class="color-button yellow" onclick="addColor('yellow1')"></button>
+    </div>
+    <br>
+    <br>
+    <strong>Secuencia ingresada:</strong> <br>
+    <br>
+    <br>
+    <div class="sequence-display" id="sequenceDisplay">
+      <br>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+
+  <script>
+   
+    // Array para almacenar la secuencia de colores
+    let colorSequence = [];
+
+    // Función para añadir color a la secuencia
+    function addColor(color) {
+      colorSequence.push(color);
+      updateSequenceDisplay();
+    }
+
+    // Función para actualizar la visualización de la secuencia
+    function updateSequenceDisplay() {
+      const sequenceDisplay = document.getElementById('sequenceDisplay');
+      sequenceDisplay.innerHTML = '';
+      colorSequence.forEach(color => {
+        const colorSquare = document.createElement('div');
+        colorSquare.className = 'color-square ' + color;
+        sequenceDisplay.appendChild(colorSquare);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casco de Buzo (Leviathan)</title>
+  <link rel="stylesheet" href="../../../../../styles.css">
+</head>
+<body>
+  <div class="title-with-image">
+    <h1 class="title"><strong>Casco de Buzo (Leviathan)</strong></h1>
+    <img src="diver_main.png" width="1280" height="720" class="responsive-image"><br><br><br>
+    <section>
+      <div class="title-with-image">
+        <p><strong>Propiedades del casco:</strong><br><br>
+          Capacidad de respirar bajo el agua.<br>
+          Resistes 1 golpe más de zombie.<br>
+          -50% de daño recibido del Buzo jefe. <br>
+          +33% de daño al Buzo jefe. <br><br><br>
+          <strong>Cómo obternerlo:</strong><br>
+          Debemos de matar al Buzo enemigo 3 veces: <br>
+        </p>
+        <div id="slider1" class="slider">
+          <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+          <div class="slide active">
+            <img src="boss1.png" width="600" height="350" class="slide-image">
+            <div class="caption">1. En la batalla para conseguir los puños</div>
+          </div>
+          <div class="slide">
+            <img src="boss2.png" width="600" height="350" class="slide-image">
+            <div class="caption">2. Tras la batalla, un buzo aparecerá en el mapa de manera aleatoria</div>
+          </div>
+          <div class="slide">
+            <img src="boss3.png" width="600" height="350" class="slide-image">
+            <div class="caption">3. Introduciendo el código en el submarino</div>
+          </div> 
+          <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+        </div>
+        <p>
+          Cuando escuchemos el sonido de confirmación podremos ir al portal cerca del Almacén. <br>
+          <img src="portal.png" width="600" height="350" class="responsive-image"><br>
+          En el Cuarto de Samantha encontraremos el casco.<br>
+          <img src="diver_final.png" width="600" height="350" class="responsive-image"><br>
+        </p>
+      </div>
+    </section>
+    <!-- Más secciones aquí -->
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
