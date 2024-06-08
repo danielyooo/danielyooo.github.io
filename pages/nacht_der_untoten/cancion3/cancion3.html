@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción 3 (Nacht Der Untoten)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+    <div class="title-with-image">
+    <h1 class="title"><strong>Canción 3 (Nacht Der Untoten)</strong></h1>
+    <img src="max.png" width="1280" height="720"class="responsive-image"><br><br><br>
+    <section>
+    <p>
+                              <!-- Reproductor de audio -->
+    <section>
+      <h2>Reproducir canción</h2>
+      <audio controls>
+        <source src="cancion3.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+      </audio>
+      <br>
+    </section>
+    <br>
+     <!-- Fin de audio -->
+      Para reproducir la canción deberemos de activar 4 botones. <br>
+      <div id="slider1" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider1')">&#10094;</button>
+            <div class="slide active">
+                <img src="bot1.png" width="600" height="350" class="slide-image">
+                <div class="caption">1. En el techo de una columna de la primera planta.</div>
+            </div>
+            <div class="slide">
+                <img src="bot2.png" width="600" height="350" class="slide-image">
+                <div class="caption">2. En el techo, subiendo las escaleras.</div>
+            </div>
+            <div class="slide">
+                <img src="bot3.png" width="600" height="350" class="slide-image">
+                <div class="caption">3. Bajo una estantería, cerca de las otras escaleras.</div>
+            </div> 
+            <div class="slide">
+                <img src="bot4.png" width="600" height="350" class="slide-image">
+                <div class="caption">4. En la pared al lado de Widows'Wine.</div>
+            </div> 
+        <button class="next" onclick="changeSlide(1, 'slider1')">&#10095;</button>
+      </div>
+      Después activaremos la muñeca de Samantha en el Spawn. <br>
+      <img src="muñeca.png" width="600" height="350"class="responsive-image"><br>
+      Tendremos que disparar a 5 muñecas. Aqui algunas localizaciones: <br>
+      <div id="slider2" class="slider">
+        <button class="prev" onclick="changeSlide(-1, 'slider2')">&#10094;</button>
+            <div class="slide active">
+                <img src="1.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="2.png" width="600" height="350" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="3.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="4.png" width="600" height="350" class="slide-image">
+            </div> 
+            <div class="slide">
+                <img src="5.png" width="600" height="350" class="slide-image">
+                <div class="caption">En el agujero del techo.</div>
+            </div> 
+        <button class="next" onclick="changeSlide(1, 'slider2')">&#10095;</button>
+      </div>
+      Volveremos a interactuar con la muñeca de Samantha y la canción empezará a sonar. También nos darán un Max Ammo. <br>
+      <img src="muñeca_fin.png" width="600" height="350"class="responsive-image"><br>
+    </p>
+  </section>
+   <!-- Más secciones aquí -->
+
+</div>
+<script src="/script.js"></script>
+
+</body>
+</html>
