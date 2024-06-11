@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+
 
   <title>Call Of The Dead</title>
   <link rel="stylesheet" href="../../styles.css">
@@ -24,7 +25,16 @@
         <br>
       </div>
     </div>
-    <br><img src="map.png" width="1280" height="720" class="responsive-image">        <br>
+    <br> <br><br>
+    <button onclick="resetImage()" class="reset-button">Restablecer Mapa</button>
+    <div class="zoom-container" id="zoomContainer">
+      <img src="map.png" width="1280" height="720" class="zoom-image" id="zoomImage">
+    </div>
+    <br><br>
+   
+    
+
+    <br>
     <div class="functions inactive" id="functionsContainer">
       <!-- Las funciones de las opciones se cargarán aquí dinámicamente -->
     </div>

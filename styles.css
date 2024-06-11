@@ -374,4 +374,40 @@ button.prev:hover, button.next:hover {
     audio::-moz-volume-slider-container {
       background-color: #000000;
     }
-   
+
+
+/* ZOOM */
+    .zoom-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+      text-align: center; /* Centra la imagen horizontalmente */
+    }
+    .zoom-image {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.25s ease; /* Transición suave para el zoom */
+      touch-action: none; /* Permite manipulación táctil */
+      cursor: grab;
+      transform-origin: center center; /* Establece el origen de la transformación en el centro */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .zoom-image:active {
+      cursor: grabbing;
+    }
+    .reset-button {
+      display: block;
+      margin: 0 auto; /* Centra el botón horizontalmente */
+      padding: 10px 20px;
+      background-color: #ff0000; /* Gris oscuro */
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
